@@ -1,0 +1,22 @@
+@use '../../styles/abstracts' as *;
+
+.spinner {
+  position: absolute; //position relative to parent
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+
+  img {
+    height: 50px;
+  }
+
+  p {
+    margin-top: -15px;
+    font-size: $font-size-md;
+    text-transform: uppercase;
+  }
+}

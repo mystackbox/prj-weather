@@ -1,0 +1,68 @@
+@use '../../styles/abstracts' as *;
+
+// layout/_grid.scss
+.site-grid-container {
+
+
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: $spacing-md + 2px;
+  text-align: center;
+  background-color: $light-neutral-bg-color;
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header"
+    "navbar"
+    "page-intro"
+    "main-content"
+    "footer";
+
+  .grid-area-carousel,
+  .grid-area-navbar,
+  .grid-area-page-intro,
+  .grid-area-main-content,
+  .grid-area-footer {
+    height: auto;
+  }
+
+  .grid-area-header {
+    grid-area: header;
+  }
+
+  .grid-area-navbar {
+    grid-area: navbar;
+     z-index: 100;
+    padding: 0;
+  }
+
+  .grid-area-page-intro {
+    grid-area: page-intro;
+  }
+
+  .grid-area-main-content {
+    grid-area: main-content;
+    padding: 0;
+  }
+
+  .grid-area-footer {
+    grid-area: footer;
+    padding: 0;
+  }
+
+}
+
+//Media queries for responsive design
+@include respond-to("xs") {
+  .site-grid-container {
+    padding: $spacing-sm;
+    row-gap: 15px;
+    justify-content: center;
+    grid-template-areas: "navbar"
+      "header"
+      "page-intro"
+      "main-content"
+      "footer";
+  }
+}

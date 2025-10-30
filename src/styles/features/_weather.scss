@@ -1,0 +1,267 @@
+@use '../../styles/abstracts' as *;
+
+#home-page-main {
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: 25px;
+
+    //features section
+    .intro-container {
+        padding: 20px 10%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+        .developer-image-container {
+            .developer-image {
+                height: 130px;
+                border-radius: 50%;
+                background-color: $light-primary-bg-color;
+                cursor: pointer;
+            }
+        }
+
+        .developer-name {
+            font-size: $font-size-lg + 8px;
+            font-weight: bold;
+            .name {
+                color: $error-color;
+            }
+        }
+
+        .quick-links {
+            display: flex;
+            flex-direction: row;
+            column-gap: 15px;
+            justify-content: center;
+            margin: 0px 20%;
+            border-bottom: 0.1em solid rgb(#e5e5e5, 1);
+            padding-bottom: 22px;
+
+            i {
+                font-size: 20px;
+                cursor: pointer;
+                padding: 5px 7px;
+                border-radius: 50px;
+                border: 0.1em solid rgb(#e5e5e5, 1);
+
+                &.bi-github {
+                    color: $dark-secondery-bg-color;
+                }
+
+                &.bi-linkedin {
+                    color: #004182;
+                }
+
+                &.bi-whatsapp {
+                    color: #25d366;
+                }
+
+                &:hover {
+                    box-shadow: $light-hover-box-shadow;
+                }
+            }
+        }
+
+        .developer-title {
+            text-transform: capitalize;
+            font-size: $font-size-md + 2px;
+            // margin: 0px 4% 8px;
+            // border-bottom: 0.1em solid rgb(#e5e5e5, 1);
+            // padding-bottom: 15px;
+
+            .titles-container {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                column-gap: 10px;
+                justify-content: center;
+
+                .title-item {
+                    // border: 0.1em solid rgb(#e5e5e5, 1);
+                    min-width: 140px;
+                }
+            }
+        }
+
+        .developer-skills-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            font-size: $font-size-sm;
+
+            .developer-skill {
+                background-color: $light-secondery-bg-color;
+                padding: $spacing-xs $spacing-sm;
+                border-radius: $spacing-sm;
+                text-align: left;
+                min-width: 156px;
+                cursor: pointer;
+
+                i {
+                    margin-right: 5px;
+                    color: $error-color;
+                }
+
+                &:hover {
+                    box-shadow: $light-hover-box-shadow;
+                    background-color: $error-color;
+                    color: $light-neutral-font-color;
+
+                    i {
+                        color: $light-neutral-font-color;
+                    }
+                }
+            }
+        }
+
+        .developer-intro {
+            font-size: $font-size-md + 1px;
+            line-height: 1.6;
+            margin: 8px 0% 0px;
+            border-top: 0.1em solid rgb(#e5e5e5, 1);
+            padding-top: 15px;
+
+            .highlight {
+                font-weight: bold;
+                color: $comp-default-font-color;
+            }
+
+            .read {
+                cursor: pointer;
+                color: $error-color;
+                display: none;
+                font-weight: 700;
+
+                .bi {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .intro-btn-container {
+
+            justify-content: center;
+
+            .intro-btn {
+                padding: 8px 28px;
+                border: none;
+                border-radius: $spacing-xs;
+                color: $light-neutral-font-color;
+                cursor: pointer;
+
+                &.projects-btn {
+                    text-transform: uppercase;
+                    background-color: $error-color;
+
+                    i {
+                        margin-right: 3px;
+                    }
+                }
+
+                &:hover {
+                    background-color: $comp-default-font-color;
+                }
+            }
+        }
+    }
+
+    @include respond-to("pro-sm") {
+
+        //features section
+        .intro-container {
+            grid-template-columns: 1fr;
+            // row-gap: 20px;
+        }
+    }
+
+    @include respond-to("pre-sm") {
+        .intro-container {
+            // padding: $spacing-lg $spacing-sm $spacing-md ;
+            padding: 20px 5%;
+            border-radius: $spacing-sm;
+            box-shadow: $light-box-shadow;
+
+            .developer-image-container {
+                .developer-image {
+                    height: 110px;
+                }
+            }
+
+            .developer-title {
+                .titles-container {
+                    column-gap: 8px;
+                    .title-item {
+                        // border: 0.1em solid rgb(#e5e5e5, 1);
+                        min-width: 80px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to("pro-xs") {
+
+        //features section
+        .intro-container {
+            .developer-title {
+                font-size: $font-size-md + 1px;
+            }
+
+            .developer-intro {
+                padding: $spacing-sm $spacing-xs ;
+                margin: 0 5%;
+
+            }
+        }
+    }
+
+    @include respond-to("xs") {
+
+        .page-content-intro-hr {
+            display: none;
+        }
+
+        //features section
+        .intro-container {
+            padding: 20px 0%;
+
+            .developer-title {
+                font-size: $font-size-md;
+            }
+
+            .developer-intro {
+
+                .read {
+                    cursor: pointer;
+                    color: $error-color;
+                    display: block;
+                    margin: -8px;
+
+                }
+
+                .quick-links {
+                    margin-top: 0;
+                }
+
+                .third-pargraph {
+                    display: none;
+                }
+            }
+
+            .intro-btn-container {
+                margin-top: -14px;
+
+                .intro-btn {
+                    padding: 9px 15px;
+                    max-width: 200px;
+                    margin-bottom: 10px;
+
+                }
+            }
+        }
+    }
+}
