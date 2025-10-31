@@ -13,3 +13,82 @@
     @warn "No value found for breakpoint `#{$max-width}`.";
   }
 }
+
+@mixin heading-1 {
+    @include global-font-sora;
+    color: $gray-500;
+    font-size: $size-md;
+    font-weight: 500;
+}
+
+@mixin heading-2 {
+    @include global-font-sora;
+    color: $gray-500;
+    font-size: $size-sm;
+    font-weight: 500;
+}
+
+@mixin heading-3 {
+    @include global-font-sora;
+    color: $gray-500;
+    font-size: $size-xs;
+    font-weight: 500;
+}
+
+/* GOOGLE FONT TYPES */
+@mixin global-font-sora {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@mixin global-font-dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@mixin global-font-onest {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@mixin global-font-inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: 36;
+}
+
+@mixin global-font-urbanist {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: 36px;
+}
+
+@mixin global-font-jura {
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+}
+
+@mixin global-font-Ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: $font-size-sm + 1px;
+  line-height: 1.5;
+}
+
+@mixin global-font-Ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
