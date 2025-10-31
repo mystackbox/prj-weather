@@ -1,2 +1,27 @@
 /* ------------ LIGHT THEME COLORS ------------ */
+@use "bootstrap" as *;
 
+/* GLOBAL SIZES -- */
+$size-xxs: 8px;
+$size-xs: 12px;
+$size-sm: 16px;
+$size-md: 24px;
+$size-lg: 28px;
+$size-xl: 32px;
+$size-xxl: 40px;
+
+
+/* BREAKPOINTS - RESPONSIVE UI*/
+$max-width: (
+  "sm-min": 320px,
+  "sm": 480px,
+  "sm-max": 550px,
+  
+  "md-min": 680px,
+  "md": 768px,
+  "md-max": 920px,
+
+  "lg-min": 992px,
+  "lg": 1200px,
+  "lg-max": 1400px
+);
