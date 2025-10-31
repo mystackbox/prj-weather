@@ -1,2 +1,15 @@
 @use '../abstracts/variables' as *;
 @use "sass:map";
+
+//Reusable media queries - handles various breakpoints
+@mixin width-up-to($max-width) {
+  @if map.has-key($max-width, $max-width) {
+    @media (max-width: map.get($max-width, $max-width)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "No value found for breakpoint `#{$max-width}`.";
+  }
+}
