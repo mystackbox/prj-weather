@@ -1,25 +1,5 @@
 @use '../../styles/abstracts' as *;
 
 .light-theme {
-    :root {
-        --bg-color: #ffffff;
-        --text-color: $light-default-font-color;
-        $primary: #000;
 
-        #main-navbar {
-            background-color: $primary;
-
-            .navbar {
-                background-color: $primary;
-            }
-
-            .page-content-intro-hr {
-
-                &::before,
-                &::after {
-                    border-bottom: 1px solid #e5e5e5;
-                }
-            }
-        }
-    }
 }
