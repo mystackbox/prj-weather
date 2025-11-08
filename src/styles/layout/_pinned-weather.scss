@@ -1,0 +1,18 @@
+@use '../../styles/abstracts' as *;
+
+#pinned-weather-container {
+    .current-weather-container {
+        border-radius: $size-xs;
+
+        background-image: url('../../../public/bg-img/list-bg/20.jpg');
+        background-size: cover;
+        background-position: 0% 35%;
+        background-repeat: no-repeat;
+
+        width: 100% auto;
+        margin: 0;
+        padding: 150px;
+        text-align: center;
+    }
+
+}

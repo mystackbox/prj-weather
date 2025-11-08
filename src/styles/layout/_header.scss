@@ -1,6 +1,33 @@
 @use '../../styles/abstracts' as *;
 
-#site-identity {
+#header-container {
 
+    border-bottom: 1px solid rgb($gray-500, 0.2);
+    padding: 10px 0;
+    text-transform: capitalize;
+
+    .site-identity {
+        display: flex;
+        column-gap: 8px;
+        font-size: $size-lg;
+        align-items: center;
+
+        .site-logo {
+            color: $yellow-500;
+            font-size: $size-xxl;
+        }
+
+        .site-name {
+            display: flex;
+            column-gap: 8px;
+            font-weight: 100;
+        }
+    }
+    
+    .statement {
+        margin: 0 5px;
+        padding: 5px 0;
+
+    }
 
 }
