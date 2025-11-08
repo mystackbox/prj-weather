@@ -1,18 +1,15 @@
 @use '../../styles/abstracts' as *;
-
-// layout/_grid.scss
-.site-grid-container {
-
+.site-grid {
 
   grid-template-columns: 1fr;
-  grid-template-areas: "header"
-                       "navbar"
-                       "main-content"
+  grid-template-areas: "navbar"
+                       "header"
+                       "main"
                        "footer";
 
   .grid-area-header,
   .grid-area-navbar,
-  .grid-area-main-content,
+  .grid-area-main,
   .grid-area-footer {
     height: auto;
   }
@@ -27,8 +24,8 @@
     padding: 0;
   }
 
-  .grid-area-main-content {
-    grid-area: main-content;
+  .grid-area-main {
+    grid-area: main;
     padding: 0;
   }
 

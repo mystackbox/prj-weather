@@ -24,26 +24,23 @@
 - Visual Studio Code
 - Node.js - v20.11.1
 - GitHub & Git Bash
-- Angular DevTool
+- DevTool
 - Postman
 
 [Back to top](#table-of-contents)
 
 # Project Concepts
 - Responsive UI Design ( HTML5 | SCSS | Grid & Flexbox Layouts | Bootstrap).
-- Angular/Typescript framework 
-  - Module-Based Approach (not stand-alone components).
+- Angular/Typescript framework (Module-Based)
 - APIs Integration
   - Real-time Weather 
   - Geo-Loction
 
 - Features:
+  - Location-based weather (with Search)
   - Themes Toggle (Dark vs Light)
   - Angular Animations
-  - Location-based weather (with Search)
   - Social Share Buttons (Open Graphs)
-  - SEO (Angular Universal | Title Interface  | Meta Interface)
-  - Performance Optimization (Lazy loading | SSR | Image Opimization)
  
 [Back to top](#table-of-contents)
 
