@@ -39,6 +39,14 @@
         font-weight: 500;
 }
 
+@mixin box-shadow-light {
+  
+}
+
+@mixin box-shadow-dark {
+
+}
+
 /* GOOGLE FONT TYPES */
 @mixin global-font-sora {
   font-family: "Sora", sans-serif;

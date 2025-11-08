@@ -1,14 +1,18 @@
 @use '../../styles/abstracts' as *;
 .site-grid {
 
+  display: grid;
+  row-gap: 5px;
   grid-template-columns: 1fr;
   grid-template-areas: "navbar"
                        "header"
+                       "pinned-weather"
                        "main"
                        "footer";
 
   .grid-area-header,
   .grid-area-navbar,
+  .grid-area-pinned-weather,
   .grid-area-main,
   .grid-area-footer {
     height: auto;
@@ -21,6 +25,11 @@
   .grid-area-navbar {
     grid-area: navbar;
      z-index: 100;
+    padding: 0;
+  }
+
+  .grid-area-pinned-weather {
+    grid-area: pinned-weather;
     padding: 0;
   }
 
