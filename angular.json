@@ -42,6 +42,9 @@
               "src/styles/main.scss"
             ],
             "stylePreprocessorOptions": {
+              "sass": {
+                "silenceDeprecations": ["mixed-decls", "color-functions", "global-builtin", "import"]
+              },
               "includePaths": ["/node_modules", "src/styles"]
             },
             "scripts": [],
@@ -89,7 +92,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",,
           "configurations": {
             "production": {
               "buildTarget": "prj-weather:build:production"

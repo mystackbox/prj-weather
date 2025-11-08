@@ -1,5 +1,5 @@
-/* ------------ LIGHT THEME COLORS ------------ */
-@use "bootstrap" as *;
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 
 /* GLOBAL SIZES -- */
 $size-xxs: 8px;
@@ -9,7 +9,6 @@ $size-md: 24px;
 $size-lg: 28px;
 $size-xl: 32px;
 $size-xxl: 40px;
-
 
 /* BREAKPOINTS - RESPONSIVE UI*/
 $max-width: (
@@ -25,3 +24,11 @@ $max-width: (
   "lg": 1200px,
   "lg-max": 1400px
 );
+
+/* COLORS */
+$light-font-color: $gray-700;
+$dark-font-color: $gray-100;
+
+
+
+

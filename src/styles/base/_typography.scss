@@ -1,1 +1,6 @@
-@use '../../styles/abstracts' as *;
+@use '../abstracts' as *;
+
+body {
+    color: $light-font-color;
+    font-size: $size-sm;
+}
