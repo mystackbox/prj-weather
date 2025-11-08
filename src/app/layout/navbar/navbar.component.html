@@ -1,1 +1,28 @@
-<p>navbar works!</p>
+<div id="main-navbar">
+  <nav class="navbar">
+    <button
+      class="navbar__toggle"
+      (click)="toggleMenu()"
+      aria-label="Toggle Menu"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="navbar__menu" [class.active]="isMenuOpen">
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/home" routerLinkActive="active">
+          <i class="bi bi-cloud-lightning-rain"></i>
+          Weather
+        </a>
+      </li>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a routerLink="/about" routerLinkActive="active">
+          <i class="bi bi-info-circle"></i>
+          About
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
