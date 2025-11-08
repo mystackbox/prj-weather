@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+#home-page-container {
+
+   display: flex;
+   row-gap: 15px;
+   flex-direction: column;
+
+   .page-name{
+    text-transform: uppercase;
+    margin: 15px 0;
+   }
+
+   .page-content {
+
+     .weekly-weather-list {
+        
+        display: grid;
+        column-gap: 25px;
+        row-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+
+        .list-item-container {
+            padding: 10px;
+            background-color: $gray-100;
+            border-radius: $size-xxs;
+             font-size: $size-xs;
+
+            i {
+                margin-right: 5px;
+            }
+        }
+     }
+   }
+
+}
