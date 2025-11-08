@@ -8,7 +8,6 @@ import { MainGridModule } from './layout/main-grid.module';
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,
