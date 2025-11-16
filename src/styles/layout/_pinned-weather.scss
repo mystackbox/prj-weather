@@ -1,18 +1,23 @@
 @use '../../styles/abstracts' as *;
 
 #pinned-weather-container {
-    .current-weather-container {
-        border-radius: $size-xs;
+    min-height: 290px;
+    background-color: rgb($teal-100, 0.6);
+    border-radius: $size-xxs - 2px;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
 
-        background-image: url('../../../public/bg-img/list-bg/20.jpg');
-        background-size: cover;
-        background-position: 0% 35%;
-        background-repeat: no-repeat;
-
-        width: 100% auto;
-        margin: 0;
-        padding: 150px;
-        text-align: center;
+    .device-locaton-container {
+        border-bottom: 1px solid rgb($gray-400, 0.4);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 15px;
+        align-content: center;
     }
+
+    .current-weather-container {
+        
+    }
+
 
 }

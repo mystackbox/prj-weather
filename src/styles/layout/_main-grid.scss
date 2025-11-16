@@ -1,14 +1,15 @@
 @use '../../styles/abstracts' as *;
+
 .site-grid {
 
   display: grid;
-  row-gap: 20px;
+  row-gap: 35px;
   grid-template-columns: 1fr;
   grid-template-areas: "navbar"
-                       "header"
-                       "pinned-weather"
-                       "main"
-                       "footer";
+    "header"
+    "pinned-weather"
+    "main"
+    "footer";
 
   .grid-area-header,
   .grid-area-navbar,
@@ -16,12 +17,19 @@
   .grid-area-main,
   .grid-area-footer {
     height: auto;
-    margin: 0 15px;
+    margin: 0px 15px;
   }
-  
+
+  background-color: #464646;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../../public/bg-desktop/58.jpg');
 
   .grid-area-header {
     grid-area: header;
+    // border-bottom: 1px solid rgb($gray-500, 0.4);
   }
 
   .grid-area-navbar {
@@ -38,13 +46,14 @@
   .grid-area-main {
     grid-area: main;
     padding: 0 0 25px 0;
-
-    border-bottom: 1px solid rgb($gray-400, 0.2);
+    border-top: 1px solid rgb($gray-400, 0.4);
   }
 
   .grid-area-footer {
     grid-area: footer;
-    padding: 0;
+    padding: 30px 0;
+     background-color: rgb($black , 0.8);
+     margin: 0;
   }
 
 }

@@ -2,7 +2,7 @@
 
 body {
     @include global-font-sora;
-    color: $light-font-color;
+    color: $font-color-default;
     font-size: $size-sm;
     background-color: $white;
 }
