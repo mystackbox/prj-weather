@@ -13,7 +13,6 @@ $breakpoint: 480px;
 
     .navbar {
 
-        // border: none;
         color: $light;
         padding: 0.6rem;
         display: flex;
@@ -55,7 +54,7 @@ $breakpoint: 480px;
             top: 100%;
             left: 0;
             width: 100%;
-            background-color: rgb($blue-900, 0.8);
+            background-color: rgb($blue-900, 1);
             flex-direction: column;
             display: none;
             padding: 0;
@@ -71,7 +70,7 @@ $breakpoint: 480px;
                     text-decoration: none;
 
                     &:hover {
-                        background-color: $teal-400;
+                        background-color: $orange-500;
                     }
                 }
             }
@@ -85,7 +84,6 @@ $breakpoint: 480px;
                 position: static;
                 flex-direction: row;
                 text-align: left;
-
                 margin: 0;
                 padding: 0;
 
@@ -106,7 +104,7 @@ $breakpoint: 480px;
                     }
 
                     &.active {
-                        background-color: rgb( $orange-500, 1);
+                        background-color: rgb($blue-500, 1);
                         color: $white;
                     }
                 }
