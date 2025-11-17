@@ -2,22 +2,71 @@
 
 #pinned-weather-container {
     min-height: 290px;
-    background-color: rgb($teal-100, 0.6);
+    background-color: rgb($black, 0.2);
     border-radius: $size-xxs - 2px;
     display: grid;
     grid-template-rows: 1fr 3fr;
 
     .device-locaton-container {
-        border-bottom: 1px solid rgb($gray-400, 0.4);
+
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 15px;
-        align-content: center;
+
+        .device-location-details {
+            align-content: center;
+
+            .location {
+                border-radius: $size-xxs - 4px;
+                padding: $size-xxs;
+
+                i {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .search-form-container {
+            align-content: center;
+            justify-self: end;
+        }
     }
 
     .current-weather-container {
-        
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .weather-temp-section {
+            padding: 25px;
+            font-size: $size-xxl + 40px;
+
+            .weather-temp {
+                // border: 1px solid white;
+            }
+        }
+
+        .weather-icon-section {
+            padding: 25px;
+
+            .weather-icon {
+                display: flex;
+                flex-direction: row;
+                column-gap: 30px;
+
+                .icon {
+                    font-size: $size-xxl + 55px;
+                }
+
+                .details {
+                    padding: 20px 0;
+                    text-transform: capitalize;
+
+                    .description {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
     }
-
-
 }
