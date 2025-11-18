@@ -1,9 +1,10 @@
+@use "sass:map";
 @use './variables' as *;
 
 //Media query - handles various breakpoints
-@mixin width-up-to($max-width) {
-  @if map.has-key($max-width, $max-width) {
-    @media (max-width: map.get($max-width, $max-width)) {
+@mixin device-view-point($max-width) {
+  @if map.has-key($max-widths, $max-width) {
+    @media (max-width: map.get($max-widths, $max-width)) {
       @content;
     }
   }

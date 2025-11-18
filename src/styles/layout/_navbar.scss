@@ -55,6 +55,7 @@ $breakpoint: 480px;
             left: 0;
             width: 100%;
             background-color: rgb($blue-900, 1);
+            
             flex-direction: column;
             display: none;
             padding: 0;
@@ -70,7 +71,8 @@ $breakpoint: 480px;
                     text-decoration: none;
 
                     &:hover {
-                        background-color: $orange-500;
+                        
+                           background-color: rgb($gray-700, 1);
                     }
                 }
             }
@@ -105,6 +107,7 @@ $breakpoint: 480px;
 
                     &.active {
                         background-color: rgb($blue-500, 1);
+                        background-color: $black;
                         color: $white;
                     }
                 }
