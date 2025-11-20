@@ -2,27 +2,22 @@
 
 #pinned-weather-container {
     min-height: 290px;
-    background-color: rgb($black, 0.2);
-    border-radius: $size-xxs - 2px;
+    padding: 25px;
+    background-color: rgb($black, 0.4);
     display: grid;
     grid-template-rows: 1fr 3fr;
+    border-radius: $size-xs;
 
     .device-locaton-container {
-
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 15px;
+        align-content: center;
 
         .device-location-details {
-            align-content: center;
-
+            
             .location {
-                border-radius: $size-xxs - 4px;
-                padding: $size-xxs;
-
-                i {
-                    margin-left: 10px;
-                }
+                border-radius: $size-xs - 4px;
             }
         }
 
@@ -33,37 +28,130 @@
     }
 
     .current-weather-container {
-
         display: grid;
         grid-template-columns: 1fr 1fr;
+        align-content: center;
 
         .weather-temp-section {
-            padding: 25px;
             font-size: $size-xxl + 40px;
 
-            .weather-temp {
-                // border: 1px solid white;
-            }
+            .weather-temp {}
         }
 
         .weather-icon-section {
-            padding: 25px;
+            // border: 1px solid white;
 
             .weather-icon {
                 display: flex;
                 flex-direction: row;
                 column-gap: 30px;
+                justify-content: center;
 
                 .icon {
                     font-size: $size-xxl + 55px;
+                    // border: 1px solid white;
                 }
 
                 .details {
                     padding: 20px 0;
                     text-transform: capitalize;
+                    // border: 1px solid white;
 
                     .description {
                         font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+     @include device-view-point("md") {
+        // background-color: rgb($black, 0.4);
+     }
+
+    @include device-view-point("md-min") {
+        .current-weather-container {
+            grid-template-columns: 4fr 5fr;
+
+            .weather-temp-section {
+                font-size: $size-xxl + 25px;
+                .weather-temp {}
+            }
+
+            .weather-icon-section {
+                .weather-icon {
+                    display: flex;
+                    flex-direction: row;
+                    column-gap: 30px;
+
+                    .icon {
+                        font-size: $size-xxl + 40px;
+                    }
+
+                    .details {
+                        padding: 20px 0;
+                        text-transform: capitalize;
+
+                        .description {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+    @include device-view-point("sm-max") {
+
+        padding: 15px;
+         grid-template-rows: 1fr;
+
+        .device-locaton-container {
+            padding: 0px;
+        }
+
+        .current-weather-container {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            // border: 1px solid white;
+
+            .weather-temp-section {
+                font-size: $size-xxl + 5px;
+                // border: 1px solid white;
+                .weather-temp {}
+            }
+
+            .weather-icon-section {
+                text-align: center;
+
+                .weather-icon {
+                    display: flex;
+                    flex-direction: column;
+                    // border: 1px solid white;
+
+                    .icon {
+                        font-size: $size-xxl + 10px;
+                        //  border: 1px solid white;
+                    }
+
+                    .details {
+                        display: flex;
+                        flex-direction: row;
+                        column-gap: 10px;
+                        //  border: 1px solid white;
+                         .little-details {
+                            // border: 1px solid white;
+                            min-width: 100px;
+                            padding: 5px 8px;
+                            font-size: $size-xs;
+                             border-radius: $size-xxs - 2px;
+                             background-color: rgb($white, 0.2);
+                         }
+
+                        .description {
+                            display: none;
+                        }
                     }
                 }
             }
