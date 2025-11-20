@@ -1,29 +1,31 @@
 @use '../../styles/abstracts' as *;
 
 #header-container {
-    padding-bottom: 20px;
-    text-transform: capitalize;
+     padding: 15px 0 40px;
     border-bottom: 1px solid rgb($gray-500, 0.4);
 
     .site-identity {
         display: flex;
+        flex-direction: column;
         column-gap: 8px;
-        font-size: $size-lg;
-        align-items: center;
-
-        .site-logo {
-            font-size: $size-xxl;
-        }
+        align-items: flex-start;
 
         .site-name {
             display: flex;
             column-gap: 8px;
             font-weight: 100;
+            text-transform: capitalize;
+            font-size: $size-lg;
+        }
+
+        .statement {
+            font-size: $size-sm + 2px;
+            color: rgb($gray-500, 0.6);
         }
     }
-    
+
     .statement {
-        margin: 0 5px;
+        margin: 0 12px;
         padding: 5px 0;
     }
 
