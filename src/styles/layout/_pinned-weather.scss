@@ -3,10 +3,12 @@
 #pinned-weather-container {
     min-height: 290px;
     padding: 25px;
-    background-color: rgb($black, 0.4);
+    background-color: rgb($blue-800, 0.3);
+    //   background-image: url('../../../public/bg-desktop/8.jpg');
+    //    background-position: 70%;
     display: grid;
     grid-template-rows: 1fr 3fr;
-    border-radius: $size-xs;
+    // border-radius: $size-xs;
 
     .device-locaton-container {
         display: grid;
@@ -146,7 +148,7 @@
                             min-width: 100px;
                             padding: 5px 5px;
                             font-size: $size-xs;
-                            border-radius: $size-xxs - 2px;
+                            // border-radius: $size-xxs - 2px;
                             background-color: rgb($white, 0.2);
                         }
 
