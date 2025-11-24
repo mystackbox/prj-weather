@@ -1,5 +1,33 @@
 @use '../../styles/abstracts/variables' as *;
 
 #about-page-main {
- 
+
+    display: flex;
+    row-gap: 15px;
+    flex-direction: column;
+
+    .page-name {
+        text-transform: uppercase;
+        margin: 30px 0 0;
+        padding: 10px;
+        border-left: 14px solid rgb($red, 1);
+        background-color: rgb($blue-800, 0.3);
+    }
+
+    .page-content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        .section-description,
+        .section-contributions,
+        .section-teck-stack {
+            background-color: rgb($white, 0.2);
+            border-radius: $size-xxs;
+            padding: 20px;
+            font-size:  $size-sm;
+
+        }
+    }
+
 }

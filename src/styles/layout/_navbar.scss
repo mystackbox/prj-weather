@@ -14,7 +14,7 @@ $breakpoint: 480px;
     .navbar {
 
         color: $light;
-        padding: 0.6rem;
+        padding: 1.2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -70,9 +70,8 @@ $breakpoint: 480px;
                     color: $white;
                     text-decoration: none;
 
-                    &:hover {
-                        
-                           background-color: rgb($gray-700, 1);
+                    &:hover {                       
+                           background-color: rgb($orange-600, 1);
                     }
                 }
             }
