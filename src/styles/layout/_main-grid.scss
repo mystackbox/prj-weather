@@ -13,7 +13,7 @@
   // background-position: 5%;
 
   display: grid;
-  row-gap: 45px;
+  row-gap: 40px;
   grid-template-columns: 1fr;
   grid-template-areas: "navbar"
     "header"
@@ -64,9 +64,13 @@
   }
 
   @include device-view-point("sm-max") {
-    background-position: 62%;
-    row-gap: 15px;
+    background-position: 24%;
+    row-gap: 20px;
 
+  }
+
+   @include device-view-point("sm") {
+    background-position: 28%;
   }
 
 }

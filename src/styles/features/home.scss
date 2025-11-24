@@ -1,18 +1,17 @@
 @use '../abstracts' as *;
 
-#home-page-container {
+#home-page-main {
 
   display: flex;
   row-gap: 15px;
   flex-direction: column;
-
 
   .page-name {
     text-transform: uppercase;
     margin: 30px 0 0;
     padding: 10px;
     border-left: 14px solid rgb($red, 1);
-     background-color: rgb($blue-800, 0.3);
+    background-color: rgb($blue-800, 0.3);
   }
 
   .page-content {
@@ -20,15 +19,16 @@
       .weather-cards {
 
         display: grid;
-        gap: 20px;
+        gap: 25px;
         grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-around;
 
         .weather-card {
-
           padding: 10px;
           background-color: rgb($white, 0.4);
           font-size: $size-xs;
-          // border-radius: $size-xxs - 2px;
+          border-radius: $size-xxs;
+          cursor: pointer;
 
           display: flex;
           flex-direction: column;
@@ -41,8 +41,9 @@
           .card-item {
 
             &.card-header {
-              border-bottom: 1px solid rgb($gray-400, 0.4);
+              border-bottom: 1px solid rgb($gray-400, 0.5);
               padding: 10px 0;
+              font-weight: bold;
 
               i {
                 margin-right: 5px;
@@ -56,14 +57,10 @@
               padding: 10px 0;
               font-size: $size-sm;
               align-items: center;
-                             
+
               .weather-icon {
                 font-size: $size-md;
               }
-
-              // .weather-icon, .weather-temp, .weather-humid, .weather-desc {
-                
-              // }
             }
 
             &.card-btn-container {
@@ -93,7 +90,6 @@
     .page-content {
       .week-weather {
         .weather-cards {
-          gap: 15px;
           grid-template-columns: 1fr 1fr;
         }
       }
@@ -101,33 +97,30 @@
   }
 
   @include device-view-point("sm-max") {
+
+    .page-name {
+      margin: 20px 0 0;
+    }
+
     .page-content {
       .week-weather {
-
         .weather-cards {
 
-          display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          justify-content: space-around;
           border-radius: $size-xxs - 2px;
           padding: 0px;
-           gap: 10px;
+          gap: 20px;
 
           .weather-card {
-           background-color: rgb($white, 0.4);
-           cursor: pointer;
-
             .card-header {
               text-align: center;
             }
 
             .card-item {
               justify-items: center;
-
-
+              
               &.weather-details-container {
                 grid-template-columns: 1fr;
-
 
                 .weather-humid,
                 .weather-desc {
@@ -139,7 +132,6 @@
                     display: none;
                   }
                 }
-
               }
 
               &.card-btn-container {
