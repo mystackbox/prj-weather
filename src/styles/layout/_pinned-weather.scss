@@ -4,11 +4,13 @@
     min-height: 290px;
     padding: 25px;
     background-color: rgb($blue-800, 0.3);
-    //   background-image: url('../../../public/bg-desktop/8.jpg');
-    //    background-position: 70%;
+    background-image: url('../../../public/bg-desktop/17.jpg');
+    background-position: 7% 5%;
+    color: $white;
+
     display: grid;
     grid-template-rows: 1fr 3fr;
-    border-radius: $size-xxs;
+    border-radius: $size-xs;
 
     .device-locaton-container {
         display: grid;
@@ -17,9 +19,18 @@
         align-content: center;
 
         .device-location-details {
-
             .location {
-                border-radius: $size-xs - 4px;
+                cursor: pointer;
+
+                .bi-geo-alt-fill {
+                    border-radius: $size-xs - 3px;
+                    background-color: rgb(#0d1b2a, 0.2);
+                    padding: 5px 8px;
+                }
+
+                &:hover {
+                    background-color: rgb(#0d1b2a, 0.6);
+                }
             }
         }
 
@@ -67,6 +78,17 @@
 
     @include device-view-point("md-min") {
 
+        .device-locaton-container {
+            padding: 0px;
+
+            .device-location-details {
+                .location {
+                    max-width: 60%;
+
+                }
+            }
+        }
+
         .current-weather-container {
             grid-template-columns: 4fr 5fr;
 
@@ -104,6 +126,16 @@
 
         .device-locaton-container {
             padding: 0px;
+
+            .device-location-details {
+                .location {
+                    background-color: transparent;
+                    padding: 0;
+                    text-align: left;
+                    max-width: 100%;
+
+                }
+            }
         }
 
         .current-weather-container {
@@ -135,7 +167,7 @@
                             padding: 5px 5px;
                             font-size: $size-xs;
                             border-radius: $size-xxs - 2px;
-                            background-color: rgb($white, 0.2);
+                            background-color: rgb($black, 0.4);
                         }
 
                         .description {
@@ -149,25 +181,22 @@
 
     @include device-view-point("sm-min") {
 
-        .current-weather-container {
+        .device-locaton-container {
+            .search-form-container {
+                align-content: center;
+                justify-self: end;
+            }
+        }
 
+        .current-weather-container {
             .weather-icon-section {
                 text-align: center;
 
                 .weather-icon {
-                    
-                    .details {
-                        display: flex;
-                        flex-direction: row;
-                        column-gap: 10px;
 
+                    .details {
                         .little-details {
-                            // border: 1px solid white;
                             min-width: 80px;
-                            padding: 5px 5px;
-                            font-size: $size-xs;
-                            border-radius: $size-xxs - 2px;
-                            background-color: rgb($white, 0.2);
                         }
 
                         .description {

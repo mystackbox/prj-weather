@@ -9,6 +9,7 @@
         flex-direction: column;
         column-gap: 8px;
         align-items: flex-start;
+        color: rgb($teal-500, 1);
 
         .site-name {
             display: flex;
@@ -20,7 +21,6 @@
 
         .statement {
             font-size: $size-sm + 2px;
-            // color: rgb($gray-500, 0.6);
         }
     }
 

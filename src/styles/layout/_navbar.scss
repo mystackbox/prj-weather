@@ -71,7 +71,7 @@ $breakpoint: 480px;
                     text-decoration: none;
 
                     &:hover {                       
-                           background-color: rgb($orange-600, 1);
+                        background-color: rgb($teal-600, 1);
                     }
                 }
             }
@@ -105,8 +105,7 @@ $breakpoint: 480px;
                     }
 
                     &.active {
-                        background-color: rgb($blue-500, 1);
-                        background-color: $black;
+                         background-color: rgb($orange-600, 1);
                         color: $white;
                     }
                 }
