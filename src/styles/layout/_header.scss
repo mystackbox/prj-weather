@@ -9,7 +9,6 @@
         flex-direction: column;
         column-gap: 8px;
         align-items: flex-start;
-        color: rgb($teal-500, 1);
 
         .site-name {
             display: flex;
@@ -17,10 +16,11 @@
             font-weight: 700;
             text-transform: capitalize;
             font-size: $size-lg;
-        }
 
-        .statement {
-            font-size: $size-sm + 2px;
+            i {
+                color: orangered;
+                font-size: $size-xl;
+            }
         }
     }
 

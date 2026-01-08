@@ -3,6 +3,7 @@
 #pinned-weather-container {
     min-height: 290px;
     padding: 25px;
+
     background-color: rgb($blue-800, 0.3);
     background-image: url('../../../public/bg-desktop/17.jpg');
     background-position: 7% 5%;
@@ -26,10 +27,6 @@
                     border-radius: $size-xs - 3px;
                     background-color: rgb(#0d1b2a, 0.2);
                     padding: 5px 8px;
-                }
-
-                &:hover {
-                    background-color: rgb(#0d1b2a, 0.6);
                 }
             }
         }
@@ -72,8 +69,12 @@
         }
     }
 
+    @include device-view-point("lg-min") {
+        background-position: 35% 5%;
+    }
+
     @include device-view-point("md") {
-        // background-color: rgb($black, 0.4);
+        background-position: 45% 5%;
     }
 
     @include device-view-point("md-min") {
@@ -120,7 +121,7 @@
     }
 
     @include device-view-point("sm-max") {
-
+        background-position: 66% 25%;
         padding: 15px;
         grid-template-rows: 1fr;
 
@@ -135,6 +136,12 @@
                     max-width: 100%;
 
                 }
+            }
+
+            .search-form-container {
+                align-content: center;
+                justify-self: end;
+                display: none;
             }
         }
 
@@ -167,7 +174,7 @@
                             padding: 5px 5px;
                             font-size: $size-xs;
                             border-radius: $size-xxs - 2px;
-                            background-color: rgb($black, 0.4);
+                            background-color: rgb($black, 0.6);
                         }
 
                         .description {
@@ -180,20 +187,13 @@
     }
 
     @include device-view-point("sm-min") {
-
-        .device-locaton-container {
-            .search-form-container {
-                align-content: center;
-                justify-self: end;
-            }
-        }
+        background-position: 55% 57%;
 
         .current-weather-container {
             .weather-icon-section {
                 text-align: center;
 
                 .weather-icon {
-
                     .details {
                         .little-details {
                             min-width: 80px;

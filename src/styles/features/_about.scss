@@ -1,32 +1,212 @@
-@use '../../styles/abstracts/variables' as *;
+@use '../abstracts' as *;
 
 #about-page-main {
 
     display: flex;
-    row-gap: 15px;
+    row-gap: 20px;
     flex-direction: column;
 
-   .page-name {
-    text-transform: uppercase;
-    margin: 30px 0 0;
-    font-weight: bold;
-    padding: 10px 12px;
-    background-color: rgb($gray-400, 0.2);
-    border-radius: $size-xxs;
-  }
+    .page-name {
+        @include page-name;
+    }
 
     .page-content {
         display: flex;
         flex-direction: column;
-        row-gap: 30px;
+        row-gap: 15px;
 
-        .section-description,
+        .section-cards,
         .section-contributions,
         .section-teck-stack {
-            background-color: rgb($white, 0.2);
             border-radius: $size-xxs;
-            padding: 20px;
-            font-size:  $size-sm;
+            padding: 10px;
+        }
+
+        .section-cards {
+
+            .cards-container {
+                display: grid;
+                gap: 35px;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-content: space-around;
+
+                .card {
+                    background-color: rgb($gray-400, 0.2);
+                    border: none;
+                    text-align: center;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+                    color: $font-color-light;
+
+                    .card-icon {
+                        font-size: $size-lg +10px;
+                        color: orangered;
+                    }
+
+                    .card-title {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .project-details {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            column-gap: 15px;
+
+            .section-contributions,
+            .section-teck-stack {
+                .heading {
+                    @include heading-2;
+                    padding: 10px 0;
+                    border-bottom: 1px solid rgb($gray-400, 0.5);
+                }
+
+                article {
+                    padding: 10px 0;
+                }
+            }
+
+            .section-teck-stack {
+
+                article {
+                    padding: 10px 0;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 15px;
+
+                    .tech-item {
+                        display: inline;
+                        padding: 5px 15px;
+                        background-color: rgb($gray-400, 0.2);
+                        border-radius: $size-xxs - 1px;
+
+                        i {
+                            padding-right: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include device-view-point("md-min") {
+        .page-content {
+            .section-cards {
+                .cards-container {
+                    gap: 25px;
+
+                    .card {
+
+                        .card-icon {
+                            font-size: $size-lg;
+                        }
+
+                        .card-title {
+                            font-size: $size-xs + 2px;
+                        }
+
+                        .card-desc {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .project-details {
+                grid-template-columns: 1fr;
+
+                .section-contributions,
+                .section-teck-stack {
+                    .heading {
+                        border-bottom: none;
+                    }
+
+                    article {
+                        padding: 25px;
+                        background-color: rgb($gray-400, 0.2);
+                        border-radius: $size-xxs;
+                    }
+                }
+            }
+        }
+    }
+
+    @include device-view-point("sm-max") {
+        .page-content {
+            .section-cards {
+                .cards-container {
+                    gap: 25px;
+
+                    .card {
+                        padding: 14px;
+
+                        .card-icon {
+                            font-size: $size-lg;
+                        }
+
+                        .card-title {
+                            font-weight: bold;
+                            font-size: $size-xs;
+                        }
+
+                        .card-desc {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .project-details {
+                grid-template-columns: 1fr;
+
+                .section-contributions,
+                .section-teck-stack {
+                    text-align: center;
+
+                    article {
+                        text-align: center;
+                    }
+                }
+
+                .section-teck-stack {
+                    display: none;
+                    article {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
+    @include device-view-point("sm") {
+        .page-content {
+            .section-cards {
+                .cards-container {
+                    gap: 25px;
+
+                    .card {
+                        padding: 10px;
+
+                        .card-icon {
+                            font-size: $size-lg;
+                        }
+
+                        .card-title {
+                            font-weight: bold;
+                            font-size: $size-xs;
+                        }
+
+                        .card-desc {
+                            display: none;
+                        }
+                    }
+                }
+            }
 
         }
     }

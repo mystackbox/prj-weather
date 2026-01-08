@@ -14,46 +14,52 @@
   }
 }
 
+@mixin page-name {
+  @include global-font-sora;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 30px 0 0;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgb($gray-400, 0.5);
+  border-left: 10px solid orangered;
+}
+
 /* Content Headings and Paragraphs */
 @mixin heading-1 {
-    @include global-font-sora;
-    color: $gray-500;
-    font-size: $size-lg;
-    font-weight: 500;
+  @include global-font-sora;
+  color: $gray-500;
+  font-size: $size-lg;
+  font-weight: 500;
 }
 
 @mixin heading-2 {
-    @include global-font-sora;
-    font-size: $size-md;
-    font-weight: 500;
+  @include global-font-sora;
+  font-size: $size-md;
+  font-weight: 500;
 }
 
 @mixin heading-3 {
-    @include global-font-sora;
-    font-size: $size-sm;
-    font-weight: 500;
+  @include global-font-sora;
+  font-size: $size-sm;
+  font-weight: 500;
 }
 
 @mixin paragraph {
-        @include global-font-dm-sans;
-        font-size: $size-xs + 2px;
-        font-weight: 500;
+  @include global-font-dm-sans;
+  font-size: $size-xs + 2px;
+  font-weight: 500;
 }
 
-@mixin box-shadow-light {
-  
-}
+@mixin box-shadow-light {}
 
-@mixin box-shadow-dark {
-
-}
+@mixin box-shadow-dark {}
 
 /* GOOGLE FONT TYPES */
 @mixin global-font-sora {
   font-family: "Sora", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal; 
+  font-weight: 200;
+  font-style: normal;
 }
 
 @mixin global-font-dm-sans {
