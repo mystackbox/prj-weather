@@ -37,7 +37,6 @@
             &.card-header {
               border-bottom: 1px solid rgb($gray-400, 0.5);
               padding: 10px 0;
-              font-weight: bold;
 
               i {
                 margin-right: 5px;
@@ -98,10 +97,7 @@
 
   @include device-view-point("sm-max") {
 
-    .page-name {
-      margin: 20px 0 0;
-    }
-
+   
     .page-content {
       .week-weather {
         .weather-cards {
@@ -119,6 +115,7 @@
 
             .card-item {
               justify-items: center;
+              font-size: $size-sm - 2px;
 
               &.weather-details-container {
                 grid-template-columns: 1fr;
