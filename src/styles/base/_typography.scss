@@ -3,9 +3,9 @@
 body {
     @include global-font-sora;
     color: $font-color-light;
-    font-size: $size-sm;
+    font-size: $size-sm + 2px;
     background-color: $teal-100;
-    background-color: rgb($gray-400, 0.2);
+    background-color: rgb($gray-400, 0.5);
 
     max-width: 1100px;
     width: 100%;
