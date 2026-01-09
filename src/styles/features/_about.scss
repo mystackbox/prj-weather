@@ -71,7 +71,7 @@
             }
 
             .section-teck-stack {
-
+                font-size: $size-xs + 3px;
                 article {
                     padding: 10px 0;
                     display: flex;
@@ -169,6 +169,7 @@
                     text-align: center;
 
                     article {
+                        padding: 15px;
                         text-align: center;
                     }
                 }
