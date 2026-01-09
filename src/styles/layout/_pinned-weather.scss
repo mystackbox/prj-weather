@@ -5,8 +5,9 @@
     padding: 25px;
 
     background-color: rgb($blue-800, 0.3);
-    background-image: url('../../../public/bg-desktop/17.jpg');
-    background-position: 7% 5%;
+    background-image: url('../../../public/bg-desktop/105.jpg');
+    background-size: cover;
+    background-position: 100%;
     color: $white;
 
     display: grid;
@@ -15,7 +16,7 @@
 
     .device-locaton-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         padding: 15px;
         align-content: center;
 
@@ -25,15 +26,13 @@
 
                 .bi-geo-alt-fill {
                     border-radius: $size-xs - 3px;
-                    background-color: rgb(#0d1b2a, 0.2);
+                    background-color: rgb(#0d1b2a, 0.5);
+                    color: #0d1b2a;
+                    background-color: rgb($white, 0.6);
                     padding: 5px 8px;
+                    margin-right: 8px;
                 }
             }
-        }
-
-        .search-form-container {
-            align-content: center;
-            justify-self: end;
         }
     }
 
@@ -121,8 +120,7 @@
     }
 
     @include device-view-point("sm-max") {
-        background-position: 66% 25%;
-        background-position: 55% 57%;
+        background-image: url('../../../public/bg-desktop/92.jpg');
         padding: 15px;
         grid-template-rows: 1fr;
 
@@ -134,16 +132,17 @@
                     background-color: transparent;
                     padding: 0;
                     text-align: left;
-                    max-width: 100%;
+                    font-size: $size-sm - 2px;
 
+                    .bi-geo-alt-fill {
+                        border-radius: $size-xs - 3px;
+                        background-color: rgb(#0d1b2a, 0.5);
+                        color: $white;
+
+                    }
                 }
             }
 
-            .search-form-container {
-                align-content: center;
-                justify-self: end;
-                display: none;
-            }
         }
 
         .current-weather-container {
@@ -175,7 +174,7 @@
                             padding: 5px 5px;
                             font-size: $size-xs;
                             border-radius: $size-xxs - 2px;
-                            background-color: rgb($black, 0.6);
+                            background-color: rgb($black, 0.4);
                         }
 
                         .description {
