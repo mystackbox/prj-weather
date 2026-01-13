@@ -6,6 +6,13 @@ const routes: Routes = [
   {
       path: '',
       component: AboutComponent,
+       data: {
+            title: 'About',
+            metaTags: [
+               { name: 'description', content: 'Yingisani Angular Personal Portfolio' },
+              { name: 'short-desc', content: 'a brief about my skills and expertise' }
+            ]
+          }
     }
 ];
 
