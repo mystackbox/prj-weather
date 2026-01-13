@@ -1,8 +1,8 @@
 <section id="pinned-weather-container">
   
   <div class="device-locaton-container">
-    <div class="device-location-details">
-      <div class="location">
+    <div class="device-location-details"  >
+      <div  class="location" *ngIf="hasChanges === true" @animateSlideInFromTop>
         <i class="bi bi-geo-alt-fill"></i>
         Fourways (ZA)
       </div>
@@ -11,26 +11,26 @@
 
   <div class="current-weather-container">
     <div class="weather-temp-section">
-      <div class="weather-temp">
+      <div class="weather-temp" *ngIf="hasChanges === true" @animateSlideInFromBottom>
         <div class="temperature">16°C</div>
       </div>
     </div>
 
-    <div class="weather-icon-section">
-      <div class="weather-icon">
-        <div class="icon">
+    <div class="weather-icon-section" >
+      <div class="weather-icon" >
+        <div class="icon" *ngIf="hasChanges === true" @animateFadeIn>
           <i class="bi bi-cloud-lightning-rain"></i>
         </div>
 
-        <div class="details">
-          <div class="little-details description">partly cloudy</div>
-          <div class="little-details humidity">
+        <div class="details" *ngIf="hasChanges === true" @staggerInFromRight>
+          <div class="animate-stagger little-details description">partly cloudy</div>
+          <div class="animate-stagger little-details humidity">
             <i class="bi bi-droplet-half"></i> 11%
           </div>
-          <div class="little-details wind-speed">
+          <div class="animate-stagger little-details wind-speed">
             <i class="bi bi-wind"></i> 3km/h
           </div>
-          <div class="little-details pressure">
+          <div class="animate-stagger little-details pressure">
             <i class="bi bi-flask-florence"></i> 10.2 mb
           </div>
         </div>

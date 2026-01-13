@@ -14,9 +14,9 @@ import { CommonModule } from '@angular/common';
   imports: [
     BrowserModule,
     CommonModule,
-    AppRoutingModule,
-    MainGridModule,
-    BrowserAnimationsModule
+    AppRoutingModule, //angular main routing module
+    MainGridModule, //master_page grid module
+    BrowserAnimationsModule //angular animations module
   ],
   providers: [
     //for BrowserAnimationsModule

@@ -11,8 +11,8 @@ export class TitleMetadataService {
 
   //Update the browser page title 
   updateTitle(title: string) {
-    console.log("Title change to " + title);
-    this._title.setTitle(`Portfolio - ${title}`);
+    //console.log("Title change to " + title);
+    this._title.setTitle(`Geo Weather - ${title}`);
     this.meta.updateTag({ name: 'title', content: title})
   }
 

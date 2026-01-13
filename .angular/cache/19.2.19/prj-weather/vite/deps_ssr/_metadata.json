@@ -1,88 +1,106 @@
 {
-  "hash": "ca1f2afb",
-  "configHash": "989d9d4e",
+  "hash": "6ff4b1dc",
+  "configHash": "fcc80808",
   "lockfileHash": "b13ac2f7",
-  "browserHash": "95074209",
+  "browserHash": "42b4d65f",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "285c6f74",
+      "fileHash": "1c0cb8ec",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "9d52d128",
+      "fileHash": "2d5fbb06",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "5e3ce41e",
+      "fileHash": "5e056b46",
       "needsInterop": false
     },
     "@angular/platform-server": {
       "src": "../../../../../../node_modules/@angular/platform-server/fesm2022/platform-server.mjs",
       "file": "@angular_platform-server.js",
-      "fileHash": "be47357c",
+      "fileHash": "0e9ecd66",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "19bf77c6",
+      "fileHash": "47171f1a",
       "needsInterop": false
     },
     "@angular/ssr": {
       "src": "../../../../../../node_modules/@angular/ssr/fesm2022/ssr.mjs",
       "file": "@angular_ssr.js",
-      "fileHash": "1e4425f9",
+      "fileHash": "e9e952bf",
       "needsInterop": false
     },
     "@angular/ssr/node": {
       "src": "../../../../../../node_modules/@angular/ssr/fesm2022/node.mjs",
       "file": "@angular_ssr_node.js",
-      "fileHash": "b0f3f9a9",
+      "fileHash": "12882397",
       "needsInterop": false
     },
     "express": {
       "src": "../../../../../../node_modules/express/index.js",
       "file": "express.js",
-      "fileHash": "14898613",
+      "fileHash": "a8f6acd8",
       "needsInterop": true
     },
     "@angular/platform-browser/animations": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
       "file": "@angular_platform-browser_animations.js",
-      "fileHash": "370d5ee8",
+      "fileHash": "d0d3821f",
       "needsInterop": false
+    },
+    "@angular/animations": {
+      "src": "../../../../../../node_modules/@angular/animations/fesm2022/animations.mjs",
+      "file": "@angular_animations.js",
+      "fileHash": "192189fc",
+      "needsInterop": false
+    },
+    "rxjs": {
+      "src": "../../../../../../node_modules/rxjs/dist/cjs/index.js",
+      "file": "rxjs.js",
+      "fileHash": "6a45b554",
+      "needsInterop": true
     }
   },
   "chunks": {
+    "chunk-DRSZAGTN": {
+      "file": "chunk-DRSZAGTN.js"
+    },
     "xhr2-TXIMV6CV": {
       "file": "xhr2-TXIMV6CV.js"
     },
-    "chunk-JA6AMLF2": {
-      "file": "chunk-JA6AMLF2.js"
+    "chunk-TXWDYVAH": {
+      "file": "chunk-TXWDYVAH.js"
     },
-    "chunk-HV3YAXVO": {
-      "file": "chunk-HV3YAXVO.js"
+    "chunk-KOE6SR4I": {
+      "file": "chunk-KOE6SR4I.js"
     },
-    "chunk-Y6GMW63H": {
-      "file": "chunk-Y6GMW63H.js"
+    "chunk-GEO7MTUV": {
+      "file": "chunk-GEO7MTUV.js"
     },
-    "chunk-GFOXQSMD": {
-      "file": "chunk-GFOXQSMD.js"
+    "chunk-V5HE5PAX": {
+      "file": "chunk-V5HE5PAX.js"
     },
-    "chunk-NXXBUDTZ": {
-      "file": "chunk-NXXBUDTZ.js"
+    "chunk-3KLNLS5X": {
+      "file": "chunk-3KLNLS5X.js"
     },
-    "chunk-O67QGYEP": {
-      "file": "chunk-O67QGYEP.js"
+    "chunk-SGSS4C5E": {
+      "file": "chunk-SGSS4C5E.js"
     },
-    "chunk-D6PCICLC": {
-      "file": "chunk-D6PCICLC.js"
+    "chunk-6FSY56HI": {
+      "file": "chunk-6FSY56HI.js"
+    },
+    "chunk-AQYIT73X": {
+      "file": "chunk-AQYIT73X.js"
     },
     "chunk-YHCV7DAQ": {
       "file": "chunk-YHCV7DAQ.js"
