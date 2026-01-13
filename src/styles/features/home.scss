@@ -37,9 +37,18 @@
             &.card-header {
               border-bottom: 1px solid rgb($gray-400, 0.5);
               padding: 10px 0;
+              font-weight: bold;
+             
 
               i {
                 margin-right: 5px;
+              }
+
+              .date {
+                font-weight: normal;
+                border-left: 1px solid rgb($gray-400, 0.8);
+                padding-left: 8px;
+                margin-left: 5px;
               }
             }
 
@@ -97,7 +106,7 @@
 
   @include device-view-point("sm-max") {
 
-   
+
     .page-content {
       .week-weather {
         .weather-cards {
@@ -108,9 +117,14 @@
           gap: 15px;
 
           .weather-card {
-
+            
             .card-header {
               text-align: center;
+              font-weight: normal;
+               font-size: $size-sm;
+              .date {
+                display: none;
+              }
             }
 
             .card-item {
@@ -124,7 +138,7 @@
                 .weather-symbol {
                   background-color: transparent;
 
-                 .weather-desc {
+                  .weather-desc {
                     display: none;
                   }
                 }
