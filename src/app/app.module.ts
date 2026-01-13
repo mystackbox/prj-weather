@@ -4,6 +4,8 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainGridModule } from './layout/main-grid.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -11,10 +13,13 @@ import { MainGridModule } from './layout/main-grid.module';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
-    MainGridModule
+    MainGridModule,
+    BrowserAnimationsModule
   ],
   providers: [
+    //for BrowserAnimationsModule
     provideClientHydration(withEventReplay())
   ],
   bootstrap: [AppComponent]
