@@ -7,7 +7,6 @@ import {
   useAnimation,
   query,
   stagger,
-  state,
 } from '@angular/animations';
 
 /* ----------------------------  FADES  -------------------------------- */
