@@ -17,7 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     NavbarComponent,
   ],
   imports: [
-    CommonModule, SharedModule,
+    CommonModule, 
     AppRoutingModule, //for router-outlet tag
   ],
   exports: [MainGridComponent],

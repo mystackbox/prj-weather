@@ -10,6 +10,7 @@
         column-gap: 8px;
         align-items: flex-start;
         cursor: pointer;
+        padding-left: 10px;
 
         .site-name {
             display: flex;
@@ -18,9 +19,10 @@
             text-transform: capitalize;
             font-size: $size-lg;
 
-            i {
-                color: orangered;
-                font-size: $size-xl;
+            .site-logo {
+                img {
+                    height: 50px;
+                }
             }
         }
     }
