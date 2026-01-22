@@ -17,6 +17,7 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     CommonModule,
+    SharedModule,
     MainGridModule, //master_page grid module
     AppRoutingModule, //angular main routing module
     BrowserAnimationsModule, //angular animations module
