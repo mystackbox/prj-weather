@@ -1,27 +1,30 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+  withEventReplay,
+} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainGridModule } from './layout/main-grid.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     CommonModule,
-    AppRoutingModule, //angular main routing module
     MainGridModule, //master_page grid module
-    BrowserAnimationsModule //angular animations module
+    AppRoutingModule, //angular main routing module
+    BrowserAnimationsModule, //angular animations module
   ],
   providers: [
     //for BrowserAnimationsModule
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

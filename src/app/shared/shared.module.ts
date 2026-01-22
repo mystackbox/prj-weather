@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ScrollUpBtnComponent } from './components/buttons/scroll-up-btn/scroll-up-btn.component';
 
 @NgModule({
-  declarations: [SpinnerComponent],
+  declarations: [ScrollUpBtnComponent],
   imports: [CommonModule],
-  exports: [SpinnerComponent],
+  exports: [ScrollUpBtnComponent],
 })
 export class SharedModule {}
