@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import {
   fadeInTrigger,
   slideInFromBottomTrigger,
@@ -14,10 +14,14 @@ import { TitleMetadataService } from '../../core/services/service-title-metadata
   standalone: false,
   templateUrl: './pinned-weather.component.html',
   styleUrl: './pinned-weather.component.scss',
-  animations: [fadeInTrigger, staggerInFromRightTrigger, slideInFromBottomTrigger, slideInFromTopTrigger],
+  animations: [
+    fadeInTrigger,
+    staggerInFromRightTrigger,
+    slideInFromBottomTrigger,
+    slideInFromTopTrigger,
+  ],
 })
 export class PinnedWeatherComponent implements OnInit {
-
   hasChanges?: boolean = false;
   pageTitle: string | undefined;
 
@@ -27,9 +31,9 @@ export class PinnedWeatherComponent implements OnInit {
     private _activatedRoute: ActivatedRoute,
     private _metaService: TitleMetadataService,
     private cdr: ChangeDetectorRef
-  ) {  }
+  ) {}
 
-   ngOnInit(): void {
+  ngOnInit(): void {
     //initiate the navigation change detection
     this.setPageTitleFromRoute();
   }
@@ -42,13 +46,12 @@ export class PinnedWeatherComponent implements OnInit {
         map(() => this._activatedRoute),
         map((route) => {
           while (route.firstChild) route = route.firstChild;
-          console.log("We were here..");
+          console.log('We were here..');
           return route;
         }),
         mergeMap((route) => route.data)
       )
       .subscribe((data) => {
-
         //detect route changes
         this.hasChanges = false;
 
@@ -56,10 +59,8 @@ export class PinnedWeatherComponent implements OnInit {
         this.cdr.detectChanges();
         this.pageTitle = data['title'];
 
-
         if (this.pageTitle) {
-
-           console.log("We moved here..");
+          console.log('We moved here..' + data['title']);
 
           //retrieve data from the activated route
           let _title = data['title'];
@@ -74,12 +75,10 @@ export class PinnedWeatherComponent implements OnInit {
         }
 
         console.log(this.hasChanges);
-
       });
   }
 
-    redirectToProjects() {
+  redirectToProjects() {
     this._router.navigate(['/home']);
   }
-
 }

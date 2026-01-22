@@ -4,8 +4,9 @@ import { MainGridComponent } from './main-grid/main-grid.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PinnedWeatherComponent } from './pinned-weather/pinned-weather.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,14 +14,12 @@ import { AppRoutingModule } from '../app-routing.module';
     HeaderComponent,
     FooterComponent,
     PinnedWeatherComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
-    CommonModule,
-    AppRoutingModule //for router-outlet tag
+    CommonModule, SharedModule,
+    AppRoutingModule, //for router-outlet tag
   ],
-  exports: [
-    MainGridComponent
-  ]
+  exports: [MainGridComponent],
 })
-export class MainGridModule { }
+export class MainGridModule {}

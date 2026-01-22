@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ToggleThemeService } from './services/service-toggle-theme/toggle-theme.service';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { TitleMetadataService } from './services/service-title-metadata/title-metadata.service';
 
 @NgModule({
   declarations: [],
@@ -11,7 +11,6 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   providers: [
-    ToggleThemeService,
     provideHttpClient(withFetch()),
   ]
 })

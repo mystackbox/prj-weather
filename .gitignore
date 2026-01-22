@@ -15,8 +15,10 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+
 # Dependency directories
 /node_modules/
+vite/
 
 # Environment files (if sensitive info is used)
 src/environments/environment*.ts
