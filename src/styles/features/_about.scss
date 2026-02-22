@@ -19,7 +19,7 @@
         .section-contributions,
         .section-teck-stack {
             border-radius: $size-xxs;
-            padding: 10px;
+            // padding: 10px;
         }
 
         .section-cards {
@@ -60,7 +60,7 @@
             column-gap: 15px;
 
             background-color: rgb($gray-400, 0.2);
-            border-radius: $size-xs;
+            border-radius: $size-xxs - 1px;
             padding: 10px;
 
             .section-contributions,
@@ -156,7 +156,7 @@
         .page-content {
             .section-cards {
                 .cards-container {
-                    gap: 25px;
+                    gap: 20px;
 
                     .card {
                         padding: 14px;
@@ -186,8 +186,9 @@
                     text-align: center;
 
                     article {
-                        padding: 15px;
+                        padding: 0px;
                         text-align: center;
+                        background-color: transparent;
                     }
                 }
 
@@ -206,7 +207,7 @@
         .page-content {
             .section-cards {
                 .cards-container {
-                    gap: 25px;
+                    gap: 15px;
 
                     .card {
                         padding: 10px;
