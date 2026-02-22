@@ -15,14 +15,15 @@
         flex-direction: column;
         row-gap: 25px;
 
+
         .section-cards,
         .section-contributions,
         .section-teck-stack {
             border-radius: $size-xxs;
-            // padding: 10px;
         }
 
         .section-cards {
+            padding: 15px 0 ;
 
             .cards-container {
                 display: grid;
@@ -31,7 +32,7 @@
                 justify-content: space-around;
 
                 .card {
-                    
+
                     border: none;
                     box-shadow: $light-box-shadow;
                     background-color: $white;
@@ -213,7 +214,7 @@
                         padding: 10px;
 
                         .card-icon {
-                            font-size: $size-lg;
+                            font-size: $size-lg + 4px;
                         }
 
                         .card-title {
@@ -224,6 +225,27 @@
                         .card-desc {
                             display: none;
                         }
+                    }
+                }
+            }
+
+            .project-details {
+
+
+                .section-contributions,
+                .section-teck-stack {
+
+
+                    article {
+                        padding: 10px;
+                    }
+                }
+
+                .section-teck-stack {
+                    display: none;
+
+                    article {
+                        justify-content: center;
                     }
                 }
             }

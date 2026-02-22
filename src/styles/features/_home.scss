@@ -91,6 +91,7 @@
 
           &:hover {
             box-shadow: $light-box-shadow;
+            background-color: rgb($gray-400, 0.2);
             cursor: pointer;
           }
         }
