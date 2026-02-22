@@ -502,10 +502,10 @@ import {
   ɵɵtwoWayBindingSet,
   ɵɵtwoWayListener,
   ɵɵtwoWayProperty,
-  ɵɵvalidateIframeAttribute,
+  ɵɵvalidateAttribute,
   ɵɵviewQuery,
   ɵɵviewQuerySignal
-} from "./chunk-6FSY56HI.js";
+} from "./chunk-DJQDLKY3.js";
 import "./chunk-AQYIT73X.js";
 import "./chunk-YHCV7DAQ.js";
 export {
@@ -1013,7 +1013,7 @@ export {
   ɵɵtwoWayBindingSet,
   ɵɵtwoWayListener,
   ɵɵtwoWayProperty,
-  ɵɵvalidateIframeAttribute,
+  ɵɵvalidateAttribute,
   ɵɵviewQuery,
   ɵɵviewQuerySignal
 };

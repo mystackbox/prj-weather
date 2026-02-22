@@ -10,7 +10,7 @@
         column-gap: 8px;
         align-items: flex-start;
         cursor: pointer;
-        padding-left: 10px;
+        padding-left: 5px;
 
         .site-name {
             display: flex;
@@ -18,11 +18,16 @@
             font-weight: 700;
             text-transform: capitalize;
             font-size: $size-lg;
+            align-items: center;
 
             .site-logo {
                 img {
                     height: 50px;
                 }
+            }
+
+            .first-title-word {
+                font-weight: normal;
             }
         }
     }
@@ -30,6 +35,25 @@
     .statement {
         margin: 0 12px;
         padding: 5px 0;
+    }
+
+    @include device-view-point("sm-max") {
+        padding: 5px 0 15px;
+
+        .site-identity {
+
+            .site-name {
+                font-weight: 700;
+                font-size: $size-md;
+
+                .site-logo {
+                    img {
+                        height: 45px;
+                    }
+                }
+            }
+        }
+
     }
 
 }

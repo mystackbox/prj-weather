@@ -7,7 +7,6 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-
   display: grid;
   row-gap: 40px;
   grid-template-columns: 1fr;
@@ -38,13 +37,11 @@
 
   .grid-area-pinned-weather {
     grid-area: pinned-weather;
-    // padding: 0;
   }
 
   .grid-area-main {
     grid-area: main;
     padding: 0 0 25px 0;
-    border-top: 1px solid rgb($gray-400, 0.4);
   }
 
   .grid-area-footer {

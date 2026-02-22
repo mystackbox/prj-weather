@@ -11,8 +11,9 @@ export class ScrollUpBtnComponent {
 
   //listen to browser events: scroll event
   @HostListener('window:scroll', [])
+  
   onWindowScroll() {
-    this.displayButton = window.scrollY > 20;
+    this.displayButton = window.scrollY > 15;
   }
 
   //scroll-up smoothly

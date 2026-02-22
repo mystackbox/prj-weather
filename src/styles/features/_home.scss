@@ -1,0 +1,355 @@
+@use '../abstracts' as *;
+
+#home-page-main {
+
+  display: flex;
+  row-gap: 35px;
+  flex-direction: column;
+
+  .page-name {
+    @include page-name;
+  }
+
+  .page-content {
+
+    .week-weather {
+
+      .weather-cards {
+        display: grid;
+        gap: 35px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        padding: 0 10px;
+
+        .weather-card {
+          padding: 0px;
+          box-shadow: $light-box-shadow;
+          border-radius: $size-xxs;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+
+          .card-item {
+            font-size: $size-sm - 2px;
+
+            &.card-header {
+              padding: 15px 15px;
+              font-weight: bold;
+
+              background-color: rgb($gray-400, 0.3);
+              border-radius: $size-xxs $size-xxs 0 0;
+
+              i {
+                margin-right: 5px;
+              }
+
+              .date {
+                font-weight: normal;
+                border-left: 1px solid rgb($gray-400, 0.8);
+                padding-left: 8px;
+                margin-left: 5px;
+              }
+            }
+
+            &.weather-details-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              row-gap: 10px;
+              padding: 0 15px 15px;
+              text-align: center;
+
+              .weather-symbol {
+                display: flex;
+                flex-direction: column;
+                column-gap: 25px;
+
+                .weather-icon {
+
+                  i {
+                    font-size: $size-lg + 15px;
+                    color: orangered;
+                  }
+                }
+              }
+
+              .weather-value {
+                display: flex;
+                column-gap: 10px;
+                justify-content: center;
+
+                .weather-item {
+                  padding: 5px 15px;
+                  font-size: $size-xxs + 2px;
+                  border-radius: $size-xxs - 3px;
+                  background-color: rgb($gray-400, 0.2);
+                  border-radius: $size-xxs - 4px;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            box-shadow: $light-box-shadow;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  @include device-view-point("md-max") {
+    .page-content {
+      .week-weather {
+        .weather-cards {
+          border-radius: $size-xxs - 2px;
+          padding: 0px;
+
+          .weather-card {
+            padding: 0px;
+            border-radius: $size-xxs;
+
+            .card-item {
+              justify-items: center;
+              font-size: $size-sm - 2px;
+
+              &.card-header {
+                font-size: $size-xs;
+                padding: 8px;
+              }
+
+              &.weather-details-container {
+                row-gap: 0px;
+                padding: 0 5px 10px;
+
+                .weather-symbol {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  font-weight: normal;
+                  margin: 0px;
+                  padding-bottom: 5px;
+
+                  .weather-icon {
+                    padding-top: 5px;
+
+                    i {
+                      font-size: $size-lg;
+                    }
+                  }
+                }
+
+                .weather-value {
+                  font-size: $size-xxs + 2px;
+                  padding: 5px;
+                  justify-content: center;
+                  column-gap: 10px;
+
+                  .weather-item {
+                    text-align: center;
+                    border: none;
+                    background-color: rgb($gray-400, 0.2);
+                    padding: 5px 8px;
+                    border-radius: $size-xxs - 4px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include device-view-point("md-min") {
+    .page-content {
+      .week-weather {
+        .weather-cards {
+          grid-template-columns: 1fr 1fr 1fr;
+          border-radius: $size-xxs - 2px;
+          padding: 0px;
+
+          .weather-card {
+            padding: 0px;
+            border-radius: $size-xxs;
+
+            .card-item {
+
+
+              &.card-header {
+                text-align: center;
+                font-size: $size-xs;
+                padding: 8px;
+              }
+
+              &.weather-details-container {
+                row-gap: 0px;
+                padding: 0 10px 10px;
+
+                .weather-symbol {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  font-weight: normal;
+                  margin: 0px;
+                  padding-bottom: 5px;
+
+                  .weather-icon {
+                    padding-top: 5px;
+
+                    i {
+                      font-size: $size-lg;
+                    }
+                  }
+                }
+
+                .weather-value {
+                  font-size: $size-xxs + 2px;
+                  padding: 5px;
+                  justify-content: center;
+                  column-gap: 10px;
+
+                  .weather-item {
+                    text-align: center;
+                    padding: 5px 10px;
+
+                    &.weather-wind {
+                      display: none
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include device-view-point("sm-max") {
+
+    .page-name {
+      margin: 10px 0 0;
+    }
+
+    .page-content {
+      .week-weather {
+        .weather-cards {
+          grid-template-columns: 1fr 1fr 1fr;
+          border-radius: $size-xxs - 2px;
+          padding: 0px;
+          gap: 25px;
+
+          .weather-card {
+            padding: 0px;
+            border-radius: $size-xxs;
+
+            .card-item {
+              justify-items: center;
+              font-size: $size-sm - 2px;
+
+              &.card-header {
+                font-size: $size-xs;
+                padding: 8px;
+
+                .date {
+                  display: none;
+                }
+              }
+
+              &.weather-details-container {
+                row-gap: 0px;
+                padding: 0px;
+
+                .weather-symbol {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  font-weight: normal;
+                  margin: 0px;
+                  padding-bottom: 0px;
+
+                  .weather-icon {
+                    padding-top: 5px;
+
+                    i {
+                      font-size: $size-lg;
+                    }
+                  }
+                }
+
+                .weather-value {
+
+                  margin-top: -5px;
+
+                  .weather-item {
+                    text-align: center;
+                    font-weight: bold;
+                    background-color: transparent;
+                    font-size: $size-xs;
+                  }
+                }
+
+                .weather-humid {
+                  display: none;
+                }
+
+                .weather-temp {
+                  .bi {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include device-view-point("sm") {
+
+    .page-content {
+
+      .week-weather {
+
+        .weather-cards {
+          .weather-card {
+
+            .card-header {
+              text-align: center;
+              font-weight: normal;
+              font-size: $size-sm;
+
+              .date {
+                display: none;
+              }
+            }
+
+            .card-item {
+              justify-items: center;
+              font-size: $size-sm - 2px;
+
+              &.weather-details-container {
+
+                .weather-symbol {
+                  .weather-desc {
+                    display: none;
+                  }
+                }
+
+                .weather-value {
+                  margin-bottom: 5px;
+
+                  .weather-item {
+                    padding: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

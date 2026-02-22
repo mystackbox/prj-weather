@@ -1,7 +1,7 @@
 @use '../../styles/abstracts' as *;
 
 #pinned-weather-container {
-    min-height: 290px;
+    // min-height: 290px;
     padding: 25px;
 
     background-color: rgb($blue-800, 0.3);
@@ -79,12 +79,9 @@
     @include device-view-point("md-min") {
 
         .device-locaton-container {
-            padding: 0px;
-
             .device-location-details {
                 .location {
                     max-width: 60%;
-
                 }
             }
         }
@@ -121,7 +118,6 @@
 
     @include device-view-point("sm-max") {
         background-image: url('../../../public/bg-desktop/92.jpg');
-        padding: 15px;
         grid-template-rows: 1fr;
 
         .device-locaton-container {
@@ -142,7 +138,6 @@
                     }
                 }
             }
-
         }
 
         .current-weather-container {
@@ -150,24 +145,27 @@
             justify-items: center;
 
             .weather-temp-section {
-                font-size: $size-xxl + 5px;
+                font-size: $size-xxl;
             }
 
             .weather-icon-section {
                 text-align: center;
+                margin-top: -10px;
 
                 .weather-icon {
                     display: flex;
                     flex-direction: column;
+                    //  border: 1px solid lightgray;
 
                     .icon {
-                        font-size: $size-xxl + 10px;
+                        font-size: $size-xxl + 5px;
                     }
 
                     .details {
                         display: flex;
                         flex-direction: row;
                         column-gap: 10px;
+                        padding: 5px;
 
                         .little-details {
                             min-width: 100px;
@@ -188,6 +186,10 @@
 
     @include device-view-point("sm-min") {
         background-position: 55% 57%;
+
+        .device-locaton-container {
+            display: none;
+        }
 
         .current-weather-container {
             .weather-icon-section {
