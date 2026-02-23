@@ -1,0 +1,36 @@
+@use '../../styles/abstracts' as *;
+
+.share-container {
+
+  display: flex;
+  gap: 15px;
+  margin: 10px 0 0 ;
+
+  // position: fixed;
+  // left: 15px;
+  // top: 40%;
+  // flex-direction: column;
+  justify-content: center;
+
+  i {
+    font-size: $size-sm + 3px;
+  }
+
+
+  button {
+    border: none;
+    border-radius: $size-xxs - 3px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    box-shadow: $light-hover-box-shadow;
+  }
+
+  .fb { color: #1877f2;  }
+  .tw { color: #000000; }
+  .ln { color: #0a66c2; }
+  .wa { color: #25d366; }
+  .copy { color: #6b7280; }
+  .native { color: #111827; }
+}

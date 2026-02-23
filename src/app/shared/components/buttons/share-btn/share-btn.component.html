@@ -1,3 +1,22 @@
+<div class="share-container">
+
+  
+  <!-- <button (click)="share('facebook')" class="fb">f</button> -->
+  <i (click)="share('facebook')" class="bi bi-facebook fb"></i>
 
 
+    <!-- <button (click)="share('whatsapp')" class="wa">wa</button> -->
+    <i (click)="share('whatsapp')" class="bi bi-whatsapp wa"></i>
+    
+  <!-- <button (click)="share('twitter')" class="tw">x</button> -->
+  <i (click)="share('twitter')" class="bi bi-twitter-x tw"></i>
 
+  <!-- <button (click)="share('linkedin')" class="ln">in</button> -->
+  <i (click)="share('linkedin')" class="bi bi-linkedin ln" ></i>
+
+    <i *ngIf="isNativeSupported" (click)="nativeShare()" class="bi bi-share-fill"></i>
+
+  <!-- <button (click)="copyLink()" class="copy">⧉</button> -->
+
+  <!-- <button *ngIf="isNativeSupported" (click)="nativeShare()"><i class="bi bi-share-fill"></i></button> -->
+</div>

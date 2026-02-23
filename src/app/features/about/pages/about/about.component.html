@@ -1,8 +1,15 @@
 <section id="about-page-main">
-  <article class="page-name">Knowledge and Expertise</article>
+  <article class="page-name">
+    Background
+  <app-share-btn
+      [title]="'Current Weather Forecast'"
+      [url]="'https://mystackbox.github.io/prj-weather/home'"
+    >
+    </app-share-btn>
+  </article>
 
   <article class="page-content">
-    <div class="section-cards">
+    <!-- <div class="section-cards">
       <div class="cards-container" @animateForwardStagger>
         <div class="card animate-stagger">
           <div class="card-icon">
@@ -32,14 +39,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="project-details">
       <div class="section-contributions">
-        <div class="heading">Project</div>
+        <div class="heading">Goe Weather</div>
         <article>
            <p>A real-time weather application developed using Angular 19
-          framework, and other wed development technologies, integrated with open API and geo-location API, that are used to determine the weather information to be displayed.</p>
+          framework and other wed development technologies, integrated with a public Weather API and geo-location API. The application uses device's current geolocation to fetch the weather information of a specific location area.</p>
         </article>
       </div>
       <div class="section-teck-stack">

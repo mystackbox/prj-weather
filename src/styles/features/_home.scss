@@ -80,7 +80,7 @@
 
                 .weather-item {
                   padding: 5px 15px;
-                  font-size: $size-xxs + 2px;
+                  font-size: $size-xxs + 3px;
                   border-radius: $size-xxs - 3px;
                   background-color: rgb($gray-400, 0.2);
                   border-radius: $size-xxs - 4px;
@@ -285,7 +285,7 @@
 
                   .weather-item {
                     text-align: center;
-                    font-weight: bold;
+                    // font-weight: bold;
                     background-color: transparent;
                     font-size: $size-xs;
                   }

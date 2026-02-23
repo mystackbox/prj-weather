@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PinnedWeatherComponent } from './pinned-weather/pinned-weather.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   imports: [
     CommonModule, 
+    SharedModule,
     AppRoutingModule, //for router-outlet tag
   ],
   exports: [MainGridComponent],

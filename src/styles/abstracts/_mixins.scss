@@ -34,7 +34,7 @@
 
 @mixin heading-2 {
   @include global-font-sora;
-  font-size: $size-md;
+  font-size: $size-md - 2px;
   font-weight: 500;
 }
 
