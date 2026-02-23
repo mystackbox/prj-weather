@@ -9,7 +9,7 @@ const routes: Routes = [
       data: {
             title: 'Home',
             metaTags: [
-               { name: 'description', content: 'Yingisani Angular Personal Portfolio' },
+               { name: 'description', content: 'Real-time weather forecast based on device current geolocation' },
               { name: 'short-desc', content: 'a brief about my skills and expertise' }
             ]
           }
