@@ -41,6 +41,7 @@
 
         .weather-temp-section {
             font-size: $size-xxl + 40px;
+            padding-left: 15px;
         }
 
         .weather-icon-section {
@@ -80,7 +81,7 @@
             grid-template-columns: 4fr 5fr;
 
             .weather-temp-section {
-                font-size: $size-xxl + 25px;
+                font-size: $size-xxl + 20px;
             }
 
             .weather-icon-section {
@@ -90,7 +91,7 @@
                     column-gap: 30px;
 
                     .icon {
-                        font-size: $size-xxl + 40px;
+                        font-size: $size-xxl + 20px;
                     }
 
                     .details {
