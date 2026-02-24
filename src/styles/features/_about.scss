@@ -11,80 +11,41 @@
     }
 
     .page-content {
-        display: flex;
-        flex-direction: column;
-        row-gap: 25px;
-        
-        .section-cards,
-        .section-contributions,
-        .section-teck-stack {
-            border-radius: $size-xxs;
-        }
-
-        .section-cards {
-            padding: 15px 0 ;
-
-            .cards-container {
-                display: grid;
-                gap: 35px;
-                grid-template-columns: 1fr 1fr 1fr;
-                justify-content: space-around;
-
-                .card {
-
-                    border: none;
-                    box-shadow: $light-box-shadow;
-                    background-color: $white;
-                    text-align: center;
-                    padding: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    row-gap: 10px;
-                    color: $font-color-light;
-
-                    .card-icon {
-                        font-size: $size-lg + 10px;
-                        color: orangered;
-                    }
-
-                    .card-title {
-                        font-weight: bold;
-                    }
-                }
-            }
-        }
-
         .project-details {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            column-gap: 15px;
-
-            background-color: rgb($gray-400, 0.2);
-            border-radius: $size-xxs - 1px;
-            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+            // padding: 10px;
 
             .section-contributions,
             .section-teck-stack {
+                border-radius: $size-xxs;
+                background-color: rgb($gray-400, 0.2);
+                padding: 20px;
+
                 .heading {
                     @include heading-2;
-                    padding: 10px 0;
                     border-bottom: 1px solid rgb($gray-400, 0.5);
                 }
 
                 article {
-                    padding: 10px 0;
+                    padding-top: 15px;
+                    font-size: $size-sm - 3px;
+
+                    p {
+                         font-size: $size-sm + 1px;
+                    }
                 }
             }
 
             .section-teck-stack {
-                font-size: $size-xs + 3px;
-
+                
                 article {
-                    padding: 10px 0;
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
                     gap: 15px;
+                    margin-top: 5px;
 
                     .tech-item {
                         display: inline;
@@ -103,42 +64,8 @@
 
     @include device-view-point("md-min") {
         .page-content {
-            .section-cards {
-                .cards-container {
-                    gap: 25px;
-
-                    .card {
-
-                        .card-icon {
-                            font-size: $size-lg;
-                        }
-
-                        .card-title {
-                            font-size: $size-xs + 2px;
-                        }
-
-                        .card-desc {
-                            display: none;
-                        }
-                    }
-                }
-            }
-
             .project-details {
                 grid-template-columns: 1fr;
-
-                .section-contributions,
-                .section-teck-stack {
-                    .heading {
-                        border-bottom: none;
-                    }
-
-                    article {
-                        padding: 25px;
-                        background-color: rgb($gray-400, 0.2);
-                        border-radius: $size-xxs;
-                    }
-                }
             }
         }
     }
@@ -147,109 +74,22 @@
 
         .page-name {
             margin: 10px 0 0;
-            padding: 0 0 25px;
-            border-bottom: 1px solid rgb($gray-400, 0.5);
-            border-left: none;
             text-align: center;
         }
 
         .page-content {
-            .section-cards {
-                .cards-container {
-                    gap: 20px;
-
-                    .card {
-                        padding: 14px;
-
-
-                        .card-icon {
-                            font-size: $size-lg;
-                        }
-
-                        .card-title {
-                            font-weight: bold;
-                            font-size: $size-xs + 2px;
-                        }
-
-                        .card-desc {
-                            display: none;
-                        }
-                    }
-                }
-            }
 
             .project-details {
                 grid-template-columns: 1fr;
+                         text-align: center;
 
-                .section-contributions,
-                .section-teck-stack {
-                    text-align: center;
-
-                    article {
-                        padding: 0px;
-                        text-align: center;
-                        background-color: transparent;
+                    .section-teck-stack {
+                        article {
+                            justify-content: center;
+                        }
                     }
-                }
-
-                .section-teck-stack {
-                    display: none;
-
-                    article {
-                        justify-content: center;
-                    }
-                }
+                
             }
         }
     }
-
-    @include device-view-point("sm") {
-        .page-content {
-            .section-cards {
-                .cards-container {
-                    gap: 15px;
-
-                    .card {
-                        padding: 10px;
-
-                        .card-icon {
-                            font-size: $size-lg + 4px;
-                        }
-
-                        .card-title {
-                            font-weight: bold;
-                            font-size: $size-xs;
-                        }
-
-                        .card-desc {
-                            display: none;
-                        }
-                    }
-                }
-            }
-
-            .project-details {
-
-
-                .section-contributions,
-                .section-teck-stack {
-
-
-                    article {
-                        padding: 10px;
-                    }
-                }
-
-                .section-teck-stack {
-                    // display: none;
-
-                    article {
-                        justify-content: center;
-                    }
-                }
-            }
-
-        }
-    }
-
 }
