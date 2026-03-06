@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { forwardStaggerTrigger } from '../../../../core/animations/animations';
 
 @Component({
@@ -11,4 +12,7 @@ import { forwardStaggerTrigger } from '../../../../core/animations/animations';
 })
 export class AboutComponent {
 
+  redirectToMyProjects(url: string) {
+     window.open(url, '_blank');
+  }
 }

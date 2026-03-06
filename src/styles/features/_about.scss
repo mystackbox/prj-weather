@@ -17,8 +17,7 @@
             row-gap: 25px;
             // padding: 10px;
 
-            .section-contributions,
-            .section-teck-stack {
+            .content-section {
                 border-radius: $size-xxs;
                 background-color: rgb($gray-400, 0.2);
                 padding: 20px;
@@ -34,6 +33,21 @@
 
                     p {
                          font-size: $size-sm + 1px;
+                    }
+
+                    .other-projects-btn {
+                        margin-top: 5px;
+                        padding: 8px 20px;
+                        font-size: $size-sm - 2px;
+                          background-color: rgb($blue-900 , 1);
+                        color: $font-color-light;
+                        border: none;
+                        border-radius: $size-xxs - 1px;
+                        cursor: pointer;
+
+                        i {
+                            padding-right: 5px;
+                        }
                     }
                 }
             }
