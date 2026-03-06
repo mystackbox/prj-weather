@@ -20,6 +20,11 @@
         align-content: center;
 
         .device-location-details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
             .location {
                 cursor: pointer;
 
@@ -29,6 +34,21 @@
                     color: $white;
                     padding: 5px 8px;
                     margin-right: 8px;
+                }
+            }
+
+            .form-switch {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                column-gap: 5px;
+
+                .form-check-input {
+                    font-size: $size-sm + 3px;
+                    background-color: rgb($indigo-900, 0.6);
+                    color: $white;
+                    border: none;
+                    width: 30px;
                 }
             }
         }
@@ -57,10 +77,10 @@
 
                 .details {
                     padding: 20px 0;
-                    text-transform: capitalize;
 
                     .description {
                         font-weight: bold;
+                        text-transform: capitalize;
                     }
                 }
             }
@@ -96,7 +116,6 @@
 
                     .details {
                         padding: 20px 0;
-                        text-transform: capitalize;
 
                         .description {
                             font-weight: bold;
@@ -142,7 +161,6 @@
                 .weather-icon {
                     display: flex;
                     flex-direction: column;
-                    //  border: 1px solid lightgray;
 
                     .icon {
                         font-size: $size-xxl + 5px;
@@ -165,6 +183,25 @@
                         .description {
                             display: none;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    @include device-view-point("sm") {
+
+        .current-weather-container {
+            .weather-temp-section {
+                font-size: $size-xl;
+            }
+
+            .weather-icon-section {
+                margin-top: -10px;
+
+                .weather-icon {
+                    .icon {
+                        font-size: $size-xxl;
                     }
                 }
             }

@@ -47,7 +47,7 @@
   .grid-area-footer {
     grid-area: footer;
     padding: 30px 0;
-    background-color: #0d1b2a;
+    background-color: rgb($blue-900 , 1);
     margin: 0;
   }
 
@@ -60,8 +60,8 @@
     row-gap: 20px;
 
     .grid-area-main {
-    border-top:none;
-  }
+      border-top: none;
+    }
 
   }
 
