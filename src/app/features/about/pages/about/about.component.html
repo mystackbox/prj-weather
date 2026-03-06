@@ -1,7 +1,7 @@
 <section id="about-page-main">
   <article class="page-name">
     About
-  <app-share-btn
+    <app-share-btn
       [title]="'Current Weather Forecast'"
       [url]="'https://mystackbox.github.io/prj-weather/home'"
     >
@@ -9,16 +9,32 @@
   </article>
 
   <article class="page-content">
-
     <div class="project-details">
-      <div class="section-contributions">
+      <div class="content-section section-contributions">
         <div class="heading">Description</div>
         <article>
-           <p>A real-time weather application developed using Angular 19
-          framework and other wed development technologies, integrated with a public Weather API and geo-location API. The application uses device's current geolocation to fetch the weather information of a specific location area.</p>
+          <p>
+            A real-time weather application developed using Angular 19 framework
+            and other wed development technologies, integrated with a public
+            Weather API and geo-location API. The application uses device's
+            current geolocation to fetch the weather information of a specific
+            location area.
+          </p>
+          <button
+            class="other-projects-btn"
+            (click)="
+              redirectToMyProjects(
+                'https://mystackbox.github.io/prj-portfolio/projects'
+              )
+            "
+          >
+                
+            <i class="bi bi-box-arrow-up-right"></i>
+            Other projects
+          </button>
         </article>
       </div>
-      <div class="section-teck-stack">
+      <div class="content-section section-teck-stack">
         <div class="heading">Stack</div>
         <article>
           <div class="tech-item">
@@ -31,13 +47,15 @@
             <i class="bi bi-check-circle-fill"></i> <span>CSS</span>
           </div>
           <div class="tech-item">
-            <i class="bi bi-check-circle-fill"></i> <span>Bootstrap Framework</span>
+            <i class="bi bi-check-circle-fill"></i>
+            <span>Bootstrap Framework</span>
           </div>
           <div class="tech-item">
             <i class="bi bi-check-circle-fill"></i> <span>RxJs Library</span>
           </div>
           <div class="tech-item">
-            <i class="bi bi-check-circle-fill"></i> <span>Responsive UI Design</span>
+            <i class="bi bi-check-circle-fill"></i>
+            <span>Responsive UI Design</span>
           </div>
           <div class="tech-item">
             <i class="bi bi-check-circle-fill"></i> <span>JavaScript</span>
@@ -45,9 +63,10 @@
           <div class="tech-item">
             <i class="bi bi-check-circle-fill"></i> <span>Angular 19</span>
           </div>
-          
+
           <div class="tech-item">
-            <i class="bi bi-check-circle-fill"></i> <span>RESTful API - JSON</span>
+            <i class="bi bi-check-circle-fill"></i>
+            <span>RESTful API - JSON</span>
           </div>
           <div class="tech-item">
             <i class="bi bi-check-circle-fill"></i> <span>Unit Testing</span>
