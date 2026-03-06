@@ -1,40 +1,47 @@
 @use '../../styles/abstracts' as *;
 
 #header-container {
-    padding: 10px 0 30px;
+    padding: 0px 0 30px;
     border-bottom: 1px solid rgb($gray-500, 0.4);
 
     .site-identity {
         display: flex;
-        flex-direction: column;
-        column-gap: 8px;
         align-items: flex-start;
         cursor: pointer;
         padding-left: 5px;
+        align-items: center;
+
+        .site-logo {
+            img {
+                height: 70px;
+            }
+        }
 
         .site-name {
             display: flex;
-            column-gap: 8px;
-            font-weight: 700;
-            text-transform: capitalize;
-            font-size: $size-lg;
-            align-items: center;
+            flex-direction: column;
 
-            .site-logo {
-                img {
-                    height: 50px;
+            font-size: $size-lg;
+
+            .site-name-text {
+                text-transform: capitalize;
+
+                .first-title-word {
+                    font-weight: normal;
+                }
+
+                .second-title-word {
+                    font-weight: bold;
                 }
             }
 
-            .first-title-word {
-                font-weight: normal;
+            .site-description {
+                font-size: $size-sm;
+                color: $gray-500;
+                padding-left: 3px;
+                margin-top: -5px;
             }
         }
-    }
-
-    .statement {
-        margin: 0 12px;
-        padding: 5px 0;
     }
 
     @include device-view-point("sm-max") {
@@ -42,15 +49,14 @@
 
         .site-identity {
 
-            .site-name {
-                font-weight: 700;
-                font-size: $size-md;
-
-                .site-logo {
-                    img {
-                        height: 45px;
-                    }
+            .site-logo {
+                img {
+                    height: 58px;
                 }
+            }
+
+            .site-name {
+                font-size: $size-md - 3px;
             }
         }
 

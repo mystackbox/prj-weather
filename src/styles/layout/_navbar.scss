@@ -1,7 +1,5 @@
 @use '../../styles/abstracts' as *;
 
-$primary: #0d1b2a;
-$light: #ecf0f1;
 $breakpoint: 480px;
 
 #main-navbar {
@@ -11,9 +9,9 @@ $breakpoint: 480px;
     margin: 0;
     text-transform: capitalize;
 
+
     .navbar {
 
-        color: $light;
         padding: 1.2rem;
         display: flex;
         justify-content: space-between;
@@ -55,7 +53,7 @@ $breakpoint: 480px;
             left: 0;
             width: 100%;
             background-color: rgb($blue-900, 1);
-            
+
             flex-direction: column;
             display: none;
             padding: 0;
@@ -67,11 +65,11 @@ $breakpoint: 480px;
                 a {
                     display: block;
                     padding: 0.6rem;
-                    color: $white;
+                    color: $font-color-light;
                     text-decoration: none;
 
-                    &:hover {                       
-                        background-color: rgb($teal-600, 1);
+                    &:hover {
+                        color: $white;
                     }
                 }
             }
@@ -105,7 +103,7 @@ $breakpoint: 480px;
                     }
 
                     &.active {
-                         background-color: rgb($orange-600, 1);
+                        background-color: rgb($orange-600, 1);
                         color: $white;
                     }
                 }
@@ -118,8 +116,48 @@ $breakpoint: 480px;
         }
     }
 
+    .form-switch {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 6px;
+        justify-self: end;
+
+        .form-check-input {
+            border: none;
+            width: 28px;
+            font-size: $size-sm + 2px;
+            background-color: rgb($font-color-light, 0.6);
+        }
+
+        .form-check-label {
+            padding-top: 4px;
+            font-size: $size-sm;
+        }
+
+    }
+
+    .desktop-switch-btn {
+        display: none;
+    }
+
     @media (min-width: $breakpoint) {
         margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .mobile-switch-btn {
+            display: none;
+        }
+
+        .desktop-switch-btn {
+            display: flex;
+            // border: 1px solid blue;
+            margin-right: 18px;
+            
+        }
     }
 
 }

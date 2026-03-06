@@ -6,11 +6,10 @@
   gap: 15px;
   margin: 15px 0 0;
 
-  // position: fixed;
-  // left: 15px;
-  // top: 40%;
-  // flex-direction: column;
-  justify-content: center;
+  position: fixed;
+  left: 15px;
+  top: 40%;
+  flex-direction: column;
 
   i {
     font-size: $size-md;
@@ -51,7 +50,15 @@
     color: #111827;
   }
 
+  @include device-view-point("lg") {
+    position: unset;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   @include device-view-point("sm-max") {
+
+
     i {
       font-size: $size-md - 4px;
     }
