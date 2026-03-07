@@ -40,15 +40,19 @@
             .form-switch {
                 display: flex;
                 flex-direction: row;
-                align-items: flex-start;
+                align-items: center;
                 column-gap: 5px;
+                font-size: $size-md;
 
                 .form-check-input {
-                    font-size: $size-sm + 3px;
                     background-color: rgb($indigo-900, 0.6);
                     color: $white;
                     border: none;
-                    width: 30px;
+                    width: 35px;
+                }
+
+                .form-check-label {
+                    padding-top: 5px;
                 }
             }
         }
@@ -88,14 +92,6 @@
     }
 
     @include device-view-point("md-min") {
-
-        .device-locaton-container {
-            .device-location-details {
-                .location {
-                    max-width: 60%;
-                }
-            }
-        }
 
         .current-weather-container {
             grid-template-columns: 4fr 5fr;
@@ -141,6 +137,19 @@
 
                     .bi-geo-alt-fill {
                         border-radius: $size-xs - 3px;
+                    }
+                }
+
+                .form-switch {
+                    align-items: center;
+                    font-size: $size-md - 2px;
+
+                    .form-check-input {
+                        width: 30px;
+                    }
+
+                    .form-check-label {
+                        font-weight: 100;
                     }
                 }
             }

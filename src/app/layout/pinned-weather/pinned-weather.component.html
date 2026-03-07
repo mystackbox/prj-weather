@@ -1,13 +1,13 @@
 <section id="pinned-weather-container">
   <div class="device-locaton-container">
-    <div class="device-location-details">
+    <div class="device-location-details"  >
 
-      <div class="location" *ngIf="hasChanges === true" @animateSlideInFromTop>
+      <div class="location" *ngIf="hasChanges === true" @animateSlideInFromLeft>
         <i class="bi bi-geo-alt-fill"></i>
         Midrand (ZA)
       </div>
       
-        <div class="form-check form-switch">
+        <div class="form-check form-switch"  *ngIf="hasChanges === true" @animateSlideInFromRight>
           <input
             class="form-check-input"
             type="checkbox"
