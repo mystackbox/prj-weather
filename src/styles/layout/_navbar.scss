@@ -9,7 +9,7 @@ $breakpoint: 480px;
     margin: 0;
     text-transform: capitalize;
 
-
+    //mobile view adjustments
     .navbar {
 
         padding: 1.2rem;
@@ -125,8 +125,8 @@ $breakpoint: 480px;
 
         .form-check-input {
             border: none;
-            width: 28px;
-            font-size: $size-sm + 2px;
+            font-size: $size-md - 2px;
+            width: 30px;
             background-color: rgb($font-color-light, 0.6);
         }
 
@@ -137,10 +137,12 @@ $breakpoint: 480px;
 
     }
 
+    //Hide the desktop switch button on mobile view
     .desktop-switch-btn {
         display: none;
     }
 
+    // Desktop view adjustments
     @media (min-width: $breakpoint) {
         margin: 0;
         display: flex;
@@ -154,9 +156,8 @@ $breakpoint: 480px;
 
         .desktop-switch-btn {
             display: flex;
-            // border: 1px solid blue;
-            margin-right: 18px;
-            
+            margin-right: 35px;
+
         }
     }
 

@@ -2,6 +2,8 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import {
   fadeInTrigger,
   slideInFromBottomTrigger,
+  slideInFromLeftTrigger,
+  slideInFromRightTrigger,
   slideInFromTopTrigger,
   staggerInFromRightTrigger,
 } from '../../core/animations/animations';
@@ -17,6 +19,8 @@ import { TitleMetadataService } from '../../core/services/service-title-metadata
   animations: [
     fadeInTrigger,
     staggerInFromRightTrigger,
+    slideInFromLeftTrigger,
+    slideInFromRightTrigger,
     slideInFromBottomTrigger,
     slideInFromTopTrigger,
   ],
@@ -30,7 +34,7 @@ export class PinnedWeatherComponent implements OnInit {
     private _router: Router,
     private _activatedRoute: ActivatedRoute,
     private _metaService: TitleMetadataService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
   ) {}
 
   ngOnInit(): void {
@@ -49,7 +53,7 @@ export class PinnedWeatherComponent implements OnInit {
           console.log('We were here..');
           return route;
         }),
-        mergeMap((route) => route.data)
+        mergeMap((route) => route.data),
       )
       .subscribe((data) => {
         //detect route changes

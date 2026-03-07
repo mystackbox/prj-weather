@@ -20,24 +20,23 @@
         .site-name {
             display: flex;
             flex-direction: column;
-
             font-size: $size-lg;
 
             .site-name-text {
                 text-transform: capitalize;
 
                 .first-title-word {
-                    font-weight: normal;
+                    font-weight: bold;
                 }
 
                 .second-title-word {
-                    font-weight: bold;
+                    font-weight: normal;
                 }
             }
 
             .site-description {
                 font-size: $size-sm;
-                color: $gray-500;
+                color: $gray-600;
                 padding-left: 3px;
                 margin-top: -5px;
             }

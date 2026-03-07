@@ -91,6 +91,8 @@ export const zoomOutTrigger = trigger('animateZoomOut', [
   ]),
 ]);
 
+
+
 /* ----------------------------  SLIDES  ------------------------------ */
 //Animation - slider
 export const slideAnimation = animation(
@@ -153,7 +155,7 @@ export const slideInFromLeftTrigger = trigger('animateSlideInFromLeft', [
         opecityBefore: 0,
         opecityAfter: 1,
         time: '1500ms',
-        positionBefore: 'translateX(-50%)',
+        positionBefore: 'translateX(-20%)',
         positionAfter: 'translateY(0)',
       },
     }),
@@ -187,6 +189,8 @@ export const toggleSlideTrigger = trigger('animateToggleSlide', [
     animate('1200ms ease-in', style({ opacity: 0 })),
   ]),
 ]);
+
+
 
 /* ----------------------------  STAGGERS  -------------------------------- */
 //Animation - forward Stagger
