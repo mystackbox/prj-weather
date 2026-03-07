@@ -18,7 +18,7 @@ const routes: Routes = [
         {
           name: 'image',
           content:
-            environment.baseUrl + 'public/img/seo-img/share-img.png',
+            environment.baseUrl + 'public/seo-img/share-img.png',
         },
         { name: 'robots', content: 'index, follow' },
         { property: 'article:author', content: 'Yingisani Chiqinda' },
@@ -39,15 +39,20 @@ const routes: Routes = [
           property: 'og:description',
           content: 'Real-time weather forecast application developed using angular framework, leveraging device geolocation to provide accurate weather updates.',
         },
+                 {
+          property: 'og:logo',
+          content:
+            environment.baseUrl + 'public/logo/1.png',
+        },
         {
           property: 'og:image',
           content:
-            environment.baseUrl + 'public/img/seo-img/share-img.png',
+            environment.baseUrl + 'public/seo-img/share-img.png',
         },
         {
           property: 'og:image:secure_url',
           content:
-            environment.baseUrl + 'public/img/seo-img/share-img.png',
+            environment.baseUrl + 'public/seo-img/share-img.png',
         },
         { property: 'og:image:type', content: 'image/png' },
         { property: 'og:image:width', content: '1200' },
@@ -57,6 +62,7 @@ const routes: Routes = [
           content: 'Geo Weather - Angular Application',
         },
         { property: 'og:url', content: environment.baseUrl },
+
 
         { name: 'twitter:card', content: 'Summary' },
         {
@@ -75,12 +81,12 @@ const routes: Routes = [
         {
           name: 'twitter:image',
           content:
-            environment.baseUrl + 'public/img/seo-img/share-img.png',
+            environment.baseUrl + 'public/seo-img/share-img.png',
         },
         {
           name: 'twitter:image:src',
           content:
-            environment.baseUrl + 'public/img/seo-img/share-img.png',
+            environment.baseUrl + 'public/seo-img/share-img.png',
         },
         {
           name: 'twitter:image:alt',
