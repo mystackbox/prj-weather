@@ -3,18 +3,32 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { MainGridModule } from './layout/main-grid.module';
+import { SharedModule } from './shared/shared.module';
+import { CommonModule } from '@angular/common';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    SharedModule,
+    MainGridModule,
+
+    BrowserAnimationsModule
   ],
   providers: [
+   
     provideBrowserGlobalErrorListeners(),
     provideClientHydration(withEventReplay()),
+
+
   ],
   bootstrap: [App]
 })
