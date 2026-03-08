@@ -1,0 +1,13 @@
+<div class="share-container">
+  <i (click)="share('facebook')" class="bi bi-facebook fb"></i>
+  <i (click)="share('whatsapp')" class="bi bi-whatsapp wa"></i>
+  <i (click)="share('twitter')" class="bi bi-twitter-x tw"></i>
+  <i (click)="share('linkedin')" class="bi bi-linkedin ln"></i>
+
+  <i
+    *ngIf="isNativeSupported"
+    (click)="nativeShare()"
+    class="bi bi-share-fill native"
+  ></i>
+
+</div>
