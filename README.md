@@ -1,6 +1,7 @@
-# Geo Weather
+# Geo-Weather App
 
 ![alt text](/public/images/github/weather-page.png)
+Click here to view ([Online](https://mystackbox.github.io/prj-weather))
  
 # Table of contents
 - [Description](#description)
@@ -13,7 +14,8 @@
 
 # Description
 
-**Geo Weather** - a real-time weather forecast single-page application developed using Angular framework, with the purpose of showcasing front-end development skills. It has been developed using web technologies such as HTML5, SCSS, and Bootstrap, with integrated public Weather RESTful.
+**Geo-Weather** - a real-time weather forecast single-page application developed using Angular framework, with the purpose of showcasing front-end development skills. It has been developed using web technologies such as HTML5, SCSS, and Bootstrap, with integrated public Weather RESTful. 
+Click here to view ([Online](https://mystackbox.github.io/prj-weather))
 
 [Back to top](#table-of-contents)
 
