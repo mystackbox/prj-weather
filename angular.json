@@ -27,6 +27,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -88,6 +89,9 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
