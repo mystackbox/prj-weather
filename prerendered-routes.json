@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/prj-weather": {},
+    "/prj-weather/about": {},
+    "/prj-weather/home": {},
+    "/prj-weather/not-found": {}
+  }
+}
