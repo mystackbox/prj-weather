@@ -1,0 +1,65 @@
+@use '../../styles/abstracts' as *;
+
+#header-container {
+    padding: 0px 0 30px;
+    border-bottom: 1px solid rgb($gray-500, 0.4);
+
+    .site-identity {
+        display: flex;
+        align-items: flex-start;
+        column-gap: 5px;
+        cursor: pointer;
+        padding-left: 5px;
+        align-items: center;
+
+        .site-logo {
+            img {
+                height: 70px;
+            }
+        }
+
+        .site-name {
+            display: flex;
+            flex-direction: column;
+            font-size: $size-lg;
+
+            .site-name-text {
+                text-transform: capitalize;
+
+                .first-title-word {
+                    font-weight: bold;
+                }
+
+                .second-title-word {
+                    font-weight: normal;
+                }
+            }
+
+            .site-description {
+                font-size: $size-sm;
+                color: $gray-600;
+                padding-left: 3px;
+                margin-top: -5px;
+            }
+        }
+    }
+
+    @include device-view-point("sm-max") {
+        padding: 5px 0 15px;
+
+        .site-identity {
+
+            .site-logo {
+                img {
+                    height: 58px;
+                }
+            }
+
+            .site-name {
+                font-size: $size-md - 3px;
+            }
+        }
+
+    }
+
+}

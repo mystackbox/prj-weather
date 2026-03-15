@@ -1,0 +1,130 @@
+@use "sass:map";
+
+$max-widths: (
+  "xs": 0px,
+  "sm-min": 375px,
+  "sm": 480px,
+  "sm-max": 550px,
+  
+  "md-min": 680px,
+  "md": 768px,
+  "md-max": 920px,
+
+  "lg-min": 992px,
+  "lg": 1200px,
+  "lg-max": 1400px
+);
+
+@use "./variables" as *;
+
+//Media query - handles various breakpoints
+@mixin device-view-point($max-width) {
+  @if map.has-key($max-widths, $max-width) {
+    @media (max-width: map.get($max-widths, $max-width)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "No value found for breakpoint `#{$max-width}`.";
+  }
+}
+
+@mixin page-name {
+  @include global-font-sora;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 0 25px;
+  border-bottom: 1px solid rgb($gray-400, 0.5);
+  border-left: none;
+  text-align: center;
+}
+
+/* -------- Headings and Paragraphs -------- */
+@mixin heading-1 {
+  @include global-font-sora;
+  color: $gray-500;
+  font-size: $size-lg;
+  font-weight: 500;
+}
+
+@mixin heading-2 {
+  @include global-font-sora;
+  font-size: $size-md - 4px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+@mixin heading-3 {
+  @include global-font-sora;
+  font-size: $size-sm;
+  font-weight: 500;
+}
+
+@mixin paragraph {
+  @include global-font-dm-sans;
+  font-size: $size-xs + 2px;
+  font-weight: 500;
+}
+
+@mixin box-shadow-light {}
+
+@mixin box-shadow-dark {}
+
+/* -------- Google Fonts -------- */
+@mixin global-font-sora {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+@mixin global-font-dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@mixin global-font-onest {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@mixin global-font-inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: 36;
+}
+
+@mixin global-font-urbanist {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: 36px;
+}
+
+@mixin global-font-jura {
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+}
+
+@mixin global-font-Ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: $font-size-sm + 1px;
+  line-height: 1.5;
+}
+
+@mixin global-font-Ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

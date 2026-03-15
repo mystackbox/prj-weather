@@ -1,0 +1,28 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/bootstrap";
+
+/* -- GLOBAL SIZES -- */
+$size-xxs: 8px;
+$size-xs: 12px;
+$size-sm: 16px;
+$size-md: 24px;
+$size-lg: 28px;
+$size-xl: 32px;
+$size-xxl: 40px;
+
+/* -- COLORS -- */
+$font-color-default: $white;
+$font-color-light: $gray-600;
+$font-color-dark: $gray-100;
+
+/* -- BOX-SHADOWS -- */
+$light-box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+$light-hover-box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 20px;
+
+$dark-box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 16px;
+$dark-hover-box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 20px;
+
+
+
+
