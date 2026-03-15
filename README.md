@@ -1,59 +1,111 @@
-# PrjWeather
+# Weather App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1.
+![alt text](/public/img/site-ui/yngi-portfolio.png)
+ 
+# Table of contents
+- [Description](#description)
+- [IDE - Tools - Environment](#ide---tools---environment)
+- [Tech Stack](#tech-stack)
+- [How to run the application](#how-to-run-the-application)
+- [Issues](#issues)
+- [References](#references)
+- [Licence](#licence)
 
-## Development server
+# Description
 
-To start a local development server, run:
+**Weather App** is a single-page application developed using Angular framework, with the purpose of showcasing front-end development skills. It has been developed using web technologies such as HTML5, SCSS, and Bootstrap, with integrated public Weather RESTful.
 
-```bash
+[Back to top](#table-of-contents)
+
+# IDE - Tools - Environment
+
+| Development Environment | Version |
+|----------|----------|
+| Angular CLI | v21.2.1  |
+| Angular  | v21.2.1  |
+| Node.js | 22.12.0 |
+| Package Manager | npm 10.9.0 |
+| Visual Studio Code | ver 1.111.0 |
+
+
+[Back to top](#table-of-contents)
+
+# Tech Stack
+- Responsive UI Design ( HTML5 | SCSS | Grid & Flexbox Layouts | Bootstrap).
+- Angular/Typescript framework (Module-Based)
+- Angular Animations
+- RESTful APIs Integration
+  - Real-time Weather | Geo-Loction
+
+- Features and Functionalities:
+  - Integrated Google Maps (Private API Key)
+  - Integrated Contact Form (Signals)
+  - Themes Toggle (Dark vs Light)
+  - Weather Units Conversion (°C or °F)
+  - Integrated Social Media Share Buttons (Open Graphs)
+  - Integrated Scroll-up button
+
+ 
+[Back to top](#table-of-contents)
+
+# How to run the application
+
+### 1. Installation
+Ensure that you have following items are installed in your computer:
+
+- Visual Studio Code
+- Node.js
+- Angular CLI
+
+### 2. Clone `GitHub` repository
+
+Clone the project [ prj-portfolio ](https://github.com/mystackbox/prj-portfolio) from Github repository into your local repository . For more information about how to clone the GitHub repository, see [Cloning GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+
+### 3. Update the API Keys
+Ensure that your in possession of GoogleMaps API Key. Open index.html in the source directory of the project and replace `YOUR_API_KEY` with your GoogleMaps API Key.
+
+```javascript
+ <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&loading=async&callback=Function.prototype&v=weekly"></script>
+``` 
+### 4. Start the Localhost server
+
+Run the following command in your `CLI` to install all the rrequired packages:
+```javascript
+npm install
+```
+Run the following command in your `CLI` to start the `localhost` server.
+```javascript
 ng serve
-```
+``` 
+Once the `localhost` server is running, navigate to `http://localhost:4200/` or copy/paste `http://localhost:4200/` in your browser address-bar, then press enter. 
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+[Back to top](#table-of-contents)
 
-## Code scaffolding
+# Issues
+- The application uses Google Maps services which requires the APK Key. This means that you will to have a Google Maps API Key for Google Maps to launch.
+- Unit Testing has not been implemented yet.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+[Back to top](#table-of-contents)
 
-```bash
-ng generate component component-name
-```
+# References
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- For more information related to Angular setup, please check out the [Angular documentation](https://angular.io/docs) page.
+- For more information related to Angular CLI, please check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- For more information related to Node.js, please check out the [Introduction to Node.js](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) page.
+- For more information related to Node Package Manager (NPM), please check out the [npm Docs](https://docs.npmjs.com/) page.
 
-```bash
-ng generate --help
-```
+[Back to top](#table-of-contents)
 
-## Building
+# Licence
 
-To build the project run:
+MIT License
 
-```bash
-ng build
-```
+Copyright (c) 2026 | Yingisani
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-## Running unit tests
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE..
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+[Back to top](#table-of-contents)
