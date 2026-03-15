@@ -1,6 +1,6 @@
-# Weather App
+# Geo Weather
 
-![alt text](/public/img/site-ui/yngi-portfolio.png)
+![alt text](/public/images/github/weather-page.png)
  
 # Table of contents
 - [Description](#description)
@@ -13,7 +13,7 @@
 
 # Description
 
-**Weather App** is a single-page application developed using Angular framework, with the purpose of showcasing front-end development skills. It has been developed using web technologies such as HTML5, SCSS, and Bootstrap, with integrated public Weather RESTful.
+**Geo Weather** - a real-time weather forecast single-page application developed using Angular framework, with the purpose of showcasing front-end development skills. It has been developed using web technologies such as HTML5, SCSS, and Bootstrap, with integrated public Weather RESTful.
 
 [Back to top](#table-of-contents)
 
@@ -83,6 +83,7 @@ Once the `localhost` server is running, navigate to `http://localhost:4200/` or 
 
 # Issues
 - The application uses Google Maps services which requires the APK Key. This means that you will to have a Google Maps API Key for Google Maps to launch.
+- The application is currently displaying hard-coded data, no integration yet.
 - Unit Testing has not been implemented yet.
 
 [Back to top](#table-of-contents)
