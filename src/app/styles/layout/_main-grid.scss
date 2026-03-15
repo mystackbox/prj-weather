@@ -1,0 +1,72 @@
+@use "../abstracts" as *;
+
+.site-grid {
+
+  background-color: $white;
+  background-attachment: scroll;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: grid;
+  row-gap: 40px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "navbar"
+    "header"
+    "pinned-weather"
+    "main"
+    "footer";
+
+  .grid-area-header,
+  .grid-area-navbar,
+  .grid-area-pinned-weather,
+  .grid-area-main,
+  .grid-area-footer {
+    height: auto;
+    margin: 0px 15px;
+  }
+
+  .grid-area-header {
+    grid-area: header;
+  }
+
+  .grid-area-navbar {
+    grid-area: navbar;
+    padding: 0;
+    margin: 0;
+  }
+
+  .grid-area-pinned-weather {
+    grid-area: pinned-weather;
+  }
+
+  .grid-area-main {
+    grid-area: main;
+    padding: 0 0 25px 0;
+  }
+
+  .grid-area-footer {
+    grid-area: footer;
+    padding: 30px 0;
+    background-color: rgb($blue-900 , 1);
+    margin: 0;
+  }
+
+  @include device-view-point("md") {
+    background-position: 22%;
+  }
+
+  @include device-view-point("sm-max") {
+    background-position: 24%;
+    row-gap: 20px;
+
+    .grid-area-main {
+      border-top: none;
+    }
+
+  }
+
+  @include device-view-point("sm") {
+    background-position: 28%;
+  }
+
+}
